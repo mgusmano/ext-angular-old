@@ -77,6 +77,7 @@ class thumbMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -134,7 +135,7 @@ class thumbMetaData {
 	inputs: thumbMetaData.INPUTNAMES,
 	outputs: thumbMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => thumb)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class thumb extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

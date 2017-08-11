@@ -17,6 +17,7 @@ class gaugeMetaData {
 		'trackStyle',
 		'value',
 		'valueStyle',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -34,7 +35,7 @@ class gaugeMetaData {
 	inputs: gaugeMetaData.INPUTNAMES,
 	outputs: gaugeMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => gauge)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class gauge extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

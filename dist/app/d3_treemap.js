@@ -123,6 +123,7 @@ d3_treemapMetaData.INPUTNAMES = [
     'xtype',
     'y',
     'zIndex',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -201,7 +202,7 @@ d3_treemap = d3_treemap_1 = __decorate([
         inputs: d3_treemapMetaData.INPUTNAMES,
         outputs: d3_treemapMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return d3_treemap_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], d3_treemap);

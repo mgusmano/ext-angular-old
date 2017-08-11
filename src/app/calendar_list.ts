@@ -5,6 +5,7 @@ class calendar_listMetaData {
 	public static XTYPE: string = 'calendar-list';
 	public static INPUTNAMES: string[] = [
 		'enableToggle',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -22,7 +23,7 @@ class calendar_listMetaData {
 	inputs: calendar_listMetaData.INPUTNAMES,
 	outputs: calendar_listMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_list)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_list extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

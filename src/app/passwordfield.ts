@@ -101,6 +101,7 @@ class passwordfieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -174,7 +175,7 @@ class passwordfieldMetaData {
 	inputs: passwordfieldMetaData.INPUTNAMES,
 	outputs: passwordfieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => passwordfield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class passwordfield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

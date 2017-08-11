@@ -42,6 +42,7 @@ class treelistMetaData {
 		'width',
 		'x',
 		'y',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -63,7 +64,7 @@ class treelistMetaData {
 	inputs: treelistMetaData.INPUTNAMES,
 	outputs: treelistMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => treelist)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class treelist extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

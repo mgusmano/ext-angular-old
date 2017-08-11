@@ -97,6 +97,7 @@ class d3_packMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -158,7 +159,7 @@ class d3_packMetaData {
 	inputs: d3_packMetaData.INPUTNAMES,
 	outputs: d3_packMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => d3_pack)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class d3_pack extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

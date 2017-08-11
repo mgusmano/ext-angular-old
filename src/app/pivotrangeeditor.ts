@@ -113,6 +113,7 @@ class pivotrangeeditorMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -188,7 +189,7 @@ class pivotrangeeditorMetaData {
 	inputs: pivotrangeeditorMetaData.INPUTNAMES,
 	outputs: pivotrangeeditorMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => pivotrangeeditor)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class pivotrangeeditor extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

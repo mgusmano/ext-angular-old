@@ -45,6 +45,7 @@ spacefillingMetaData.INPUTNAMES = [
     'store',
     'style',
     'theme',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -121,7 +122,7 @@ spacefilling = spacefilling_1 = __decorate([
         inputs: spacefillingMetaData.INPUTNAMES,
         outputs: spacefillingMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return spacefilling_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], spacefilling);

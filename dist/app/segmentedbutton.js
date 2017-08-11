@@ -118,6 +118,7 @@ segmentedbuttonMetaData.INPUTNAMES = [
     'xtype',
     'y',
     'zIndex',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -208,7 +209,7 @@ segmentedbutton = segmentedbutton_1 = __decorate([
         inputs: segmentedbuttonMetaData.INPUTNAMES,
         outputs: segmentedbuttonMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return segmentedbutton_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], segmentedbutton);

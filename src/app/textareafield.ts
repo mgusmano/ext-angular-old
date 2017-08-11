@@ -100,6 +100,7 @@ class textareafieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -173,7 +174,7 @@ class textareafieldMetaData {
 	inputs: textareafieldMetaData.INPUTNAMES,
 	outputs: textareafieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => textareafield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class textareafield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

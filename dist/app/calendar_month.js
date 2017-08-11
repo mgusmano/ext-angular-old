@@ -34,6 +34,7 @@ calendar_monthMetaData.INPUTNAMES = [
     'value',
     'view',
     'visibleWeeks',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -94,7 +95,7 @@ calendar_month = calendar_month_1 = __decorate([
         inputs: calendar_monthMetaData.INPUTNAMES,
         outputs: calendar_monthMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return calendar_month_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], calendar_month);

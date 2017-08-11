@@ -85,6 +85,7 @@ class d3_heatmapMetaData {
 		'y',
 		'yAxis',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -146,7 +147,7 @@ class d3_heatmapMetaData {
 	inputs: d3_heatmapMetaData.INPUTNAMES,
 	outputs: d3_heatmapMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => d3_heatmap)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class d3_heatmap extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

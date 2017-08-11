@@ -93,6 +93,7 @@ class radiofieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -156,7 +157,7 @@ class radiofieldMetaData {
 	inputs: radiofieldMetaData.INPUTNAMES,
 	outputs: radiofieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => radiofield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class radiofield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

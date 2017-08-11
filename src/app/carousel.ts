@@ -88,6 +88,7 @@ class carouselMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -157,7 +158,7 @@ class carouselMetaData {
 	inputs: carouselMetaData.INPUTNAMES,
 	outputs: carouselMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => carousel)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class carousel extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

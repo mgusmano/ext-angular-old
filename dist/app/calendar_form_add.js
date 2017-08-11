@@ -33,6 +33,7 @@ calendar_form_addMetaData.INPUTNAMES = [
     'event',
     'title',
     'view',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -73,7 +74,7 @@ calendar_form_add = calendar_form_add_1 = __decorate([
         inputs: calendar_form_addMetaData.INPUTNAMES,
         outputs: calendar_form_addMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return calendar_form_add_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], calendar_form_add);

@@ -99,6 +99,7 @@ class emailfieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -172,7 +173,7 @@ class emailfieldMetaData {
 	inputs: emailfieldMetaData.INPUTNAMES,
 	outputs: emailfieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => emailfield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class emailfield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -94,6 +94,7 @@ class filefieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -153,7 +154,7 @@ class filefieldMetaData {
 	inputs: filefieldMetaData.INPUTNAMES,
 	outputs: filefieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => filefield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class filefield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -41,6 +41,7 @@ gaugeMetaData.INPUTNAMES = [
     'trackStyle',
     'value',
     'valueStyle',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -75,7 +76,7 @@ gauge = gauge_1 = __decorate([
         inputs: gaugeMetaData.INPUTNAMES,
         outputs: gaugeMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return gauge_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], gauge);

@@ -92,6 +92,7 @@ class pagingtoolbarMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -161,7 +162,7 @@ class pagingtoolbarMetaData {
 	inputs: pagingtoolbarMetaData.INPUTNAMES,
 	outputs: pagingtoolbarMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => pagingtoolbar)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class pagingtoolbar extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -86,6 +86,7 @@ class videoMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -157,7 +158,7 @@ class videoMetaData {
 	inputs: videoMetaData.INPUTNAMES,
 	outputs: videoMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => video)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class video extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

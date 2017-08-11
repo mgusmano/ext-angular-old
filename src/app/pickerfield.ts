@@ -103,6 +103,7 @@ class pickerfieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -176,7 +177,7 @@ class pickerfieldMetaData {
 	inputs: pickerfieldMetaData.INPUTNAMES,
 	outputs: pickerfieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => pickerfield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class pickerfield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

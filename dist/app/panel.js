@@ -122,6 +122,7 @@ panelMetaData.INPUTNAMES = [
     'xtype',
     'y',
     'zIndex',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -208,7 +209,7 @@ panel = panel_1 = __decorate([
         inputs: panelMetaData.INPUTNAMES,
         outputs: panelMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return panel_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], panel);

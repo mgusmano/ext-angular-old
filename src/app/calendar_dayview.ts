@@ -25,6 +25,7 @@ class calendar_dayviewMetaData {
 		'timezoneOffset',
 		'value',
 		'visibleDays',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -70,7 +71,7 @@ class calendar_dayviewMetaData {
 	inputs: calendar_dayviewMetaData.INPUTNAMES,
 	outputs: calendar_dayviewMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_dayview)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_dayview extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

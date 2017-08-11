@@ -99,6 +99,7 @@ spacerMetaData.INPUTNAMES = [
     'xtype',
     'y',
     'zIndex',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -173,7 +174,7 @@ spacer = spacer_1 = __decorate([
         inputs: spacerMetaData.INPUTNAMES,
         outputs: spacerMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return spacer_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], spacer);

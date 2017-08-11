@@ -8,6 +8,7 @@ class interactionMetaData {
 		'enabled',
 		'gesture',
 		'listeners',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -25,7 +26,7 @@ class interactionMetaData {
 	inputs: interactionMetaData.INPUTNAMES,
 	outputs: interactionMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => interaction)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class interaction extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

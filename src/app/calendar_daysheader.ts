@@ -10,6 +10,7 @@ class calendar_daysheaderMetaData {
 		'format',
 		'value',
 		'visibleDays',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -27,7 +28,7 @@ class calendar_daysheaderMetaData {
 	inputs: calendar_daysheaderMetaData.INPUTNAMES,
 	outputs: calendar_daysheaderMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_daysheader)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_daysheader extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

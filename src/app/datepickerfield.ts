@@ -106,6 +106,7 @@ class datepickerfieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -179,7 +180,7 @@ class datepickerfieldMetaData {
 	inputs: datepickerfieldMetaData.INPUTNAMES,
 	outputs: datepickerfieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => datepickerfield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class datepickerfield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

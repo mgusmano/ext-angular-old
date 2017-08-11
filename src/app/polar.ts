@@ -24,6 +24,7 @@ class polarMetaData {
 		'store',
 		'style',
 		'theme',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -83,7 +84,7 @@ class polarMetaData {
 	inputs: polarMetaData.INPUTNAMES,
 	outputs: polarMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => polar)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class polar extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

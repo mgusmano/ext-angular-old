@@ -121,6 +121,7 @@ sliderfieldMetaData.INPUTNAMES = [
     'xtype',
     'y',
     'zIndex',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -205,7 +206,7 @@ sliderfield = sliderfield_1 = __decorate([
         inputs: sliderfieldMetaData.INPUTNAMES,
         outputs: sliderfieldMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return sliderfield_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], sliderfield);

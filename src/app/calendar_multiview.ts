@@ -10,6 +10,7 @@ class calendar_multiviewMetaData {
 		'timezoneOffset',
 		'value',
 		'views',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -27,7 +28,7 @@ class calendar_multiviewMetaData {
 	inputs: calendar_multiviewMetaData.INPUTNAMES,
 	outputs: calendar_multiviewMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_multiview)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_multiview extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

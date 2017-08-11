@@ -126,6 +126,7 @@ class listMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -229,7 +230,7 @@ class listMetaData {
 	inputs: listMetaData.INPUTNAMES,
 	outputs: listMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => list)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class list extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

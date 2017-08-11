@@ -89,6 +89,7 @@ class tabpanelMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -158,7 +159,7 @@ class tabpanelMetaData {
 	inputs: tabpanelMetaData.INPUTNAMES,
 	outputs: tabpanelMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => tabpanel)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class tabpanel extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

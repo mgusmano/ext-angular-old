@@ -109,6 +109,7 @@ d3_heatmapMetaData.INPUTNAMES = [
     'y',
     'yAxis',
     'zIndex',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -187,7 +188,7 @@ d3_heatmap = d3_heatmap_1 = __decorate([
         inputs: d3_heatmapMetaData.INPUTNAMES,
         outputs: d3_heatmapMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return d3_heatmap_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], d3_heatmap);

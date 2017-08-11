@@ -90,6 +90,7 @@ class titlebarMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -159,7 +160,7 @@ class titlebarMetaData {
 	inputs: titlebarMetaData.INPUTNAMES,
 	outputs: titlebarMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => titlebar)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class titlebar extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

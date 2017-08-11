@@ -41,6 +41,7 @@ class surfaceMetaData {
 		'width',
 		'x',
 		'y',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -62,7 +63,7 @@ class surfaceMetaData {
 	inputs: surfaceMetaData.INPUTNAMES,
 	outputs: surfaceMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => surface)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class surface extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -79,6 +79,7 @@ class loadmaskMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -138,7 +139,7 @@ class loadmaskMetaData {
 	inputs: loadmaskMetaData.INPUTNAMES,
 	outputs: loadmaskMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => loadmask)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class loadmask extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

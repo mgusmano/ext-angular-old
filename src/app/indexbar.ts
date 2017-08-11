@@ -79,6 +79,7 @@ class indexbarMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -138,7 +139,7 @@ class indexbarMetaData {
 	inputs: indexbarMetaData.INPUTNAMES,
 	outputs: indexbarMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => indexbar)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class indexbar extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

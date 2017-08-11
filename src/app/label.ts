@@ -75,6 +75,7 @@ class labelMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -132,7 +133,7 @@ class labelMetaData {
 	inputs: labelMetaData.INPUTNAMES,
 	outputs: labelMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => label)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class label extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

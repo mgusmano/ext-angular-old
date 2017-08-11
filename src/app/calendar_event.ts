@@ -15,6 +15,7 @@ class calendar_eventMetaData {
 		'title',
 		'touchAction',
 		'view',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -32,7 +33,7 @@ class calendar_eventMetaData {
 	inputs: calendar_eventMetaData.INPUTNAMES,
 	outputs: calendar_eventMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_event)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_event extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

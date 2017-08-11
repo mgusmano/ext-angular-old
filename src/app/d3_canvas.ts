@@ -79,6 +79,7 @@ class d3_canvasMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -138,7 +139,7 @@ class d3_canvasMetaData {
 	inputs: d3_canvasMetaData.INPUTNAMES,
 	outputs: d3_canvasMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => d3_canvas)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class d3_canvas extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

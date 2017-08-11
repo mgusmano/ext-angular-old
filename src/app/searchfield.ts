@@ -99,6 +99,7 @@ class searchfieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -172,7 +173,7 @@ class searchfieldMetaData {
 	inputs: searchfieldMetaData.INPUTNAMES,
 	outputs: searchfieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => searchfield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class searchfield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

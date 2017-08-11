@@ -112,6 +112,7 @@ class tooltipMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -181,7 +182,7 @@ class tooltipMetaData {
 	inputs: tooltipMetaData.INPUTNAMES,
 	outputs: tooltipMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => tooltip)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class tooltip extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

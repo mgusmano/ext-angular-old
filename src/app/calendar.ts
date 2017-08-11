@@ -22,6 +22,7 @@ class calendarMetaData {
 		'todayButton',
 		'value',
 		'views',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -39,7 +40,7 @@ class calendarMetaData {
 	inputs: calendarMetaData.INPUTNAMES,
 	outputs: calendarMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

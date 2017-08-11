@@ -99,6 +99,7 @@ class fileinputMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -172,7 +173,7 @@ class fileinputMetaData {
 	inputs: fileinputMetaData.INPUTNAMES,
 	outputs: fileinputMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => fileinput)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class fileinput extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

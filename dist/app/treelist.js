@@ -66,6 +66,7 @@ treelistMetaData.INPUTNAMES = [
     'width',
     'x',
     'y',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -104,7 +105,7 @@ treelist = treelist_1 = __decorate([
         inputs: treelistMetaData.INPUTNAMES,
         outputs: treelistMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return treelist_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], treelist);

@@ -96,6 +96,7 @@ class textinputMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -167,7 +168,7 @@ class textinputMetaData {
 	inputs: textinputMetaData.INPUTNAMES,
 	outputs: textinputMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => textinput)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class textinput extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

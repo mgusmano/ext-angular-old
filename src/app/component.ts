@@ -75,6 +75,7 @@ class componentMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -132,7 +133,7 @@ class componentMetaData {
 	inputs: componentMetaData.INPUTNAMES,
 	outputs: componentMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => component)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class component extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

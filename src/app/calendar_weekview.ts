@@ -26,6 +26,7 @@ class calendar_weekviewMetaData {
 		'timezoneOffset',
 		'value',
 		'visibleDays',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -71,7 +72,7 @@ class calendar_weekviewMetaData {
 	inputs: calendar_weekviewMetaData.INPUTNAMES,
 	outputs: calendar_weekviewMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_weekview)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_weekview extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

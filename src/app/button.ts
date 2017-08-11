@@ -95,6 +95,7 @@ class buttonMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -156,7 +157,7 @@ class buttonMetaData {
 	inputs: buttonMetaData.INPUTNAMES,
 	outputs: buttonMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => button)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class button extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -32,6 +32,7 @@ drawMetaData.INPUTNAMES = [
     'gradients',
     'resizeHandler',
     'sprites',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -84,7 +85,7 @@ draw = draw_1 = __decorate([
         inputs: drawMetaData.INPUTNAMES,
         outputs: drawMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return draw_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], draw);

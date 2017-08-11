@@ -1,7 +1,7 @@
 delete dist/ folder
 delete /src/
 create src/app folders
-go to ExtAngular folder
+go to ext-angular folder
 node all.js (fills src/app folders)
 tsc (creates dist folder)
 cp -r demo dist/demo/

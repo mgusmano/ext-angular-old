@@ -33,6 +33,7 @@ calendar_dayMetaData.INPUTNAMES = [
     'eventRelayers',
     'view',
     'visibleDays',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -99,7 +100,7 @@ calendar_day = calendar_day_1 = __decorate([
         inputs: calendar_dayMetaData.INPUTNAMES,
         outputs: calendar_dayMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return calendar_day_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], calendar_day);

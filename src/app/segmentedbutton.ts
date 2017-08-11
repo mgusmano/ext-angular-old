@@ -94,6 +94,7 @@ class segmentedbuttonMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -167,7 +168,7 @@ class segmentedbuttonMetaData {
 	inputs: segmentedbuttonMetaData.INPUTNAMES,
 	outputs: segmentedbuttonMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => segmentedbutton)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class segmentedbutton extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

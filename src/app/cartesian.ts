@@ -23,6 +23,7 @@ class cartesianMetaData {
 		'store',
 		'style',
 		'theme',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -82,7 +83,7 @@ class cartesianMetaData {
 	inputs: cartesianMetaData.INPUTNAMES,
 	outputs: cartesianMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => cartesian)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class cartesian extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

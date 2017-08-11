@@ -99,6 +99,7 @@ class d3_sunburstMetaData {
 		'y',
 		'zIndex',
 		'zoomParentDotRadius',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -160,7 +161,7 @@ class d3_sunburstMetaData {
 	inputs: d3_sunburstMetaData.INPUTNAMES,
 	outputs: d3_sunburstMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => d3_sunburst)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class d3_sunburst extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

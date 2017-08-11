@@ -26,6 +26,7 @@ class calendar_monthviewMetaData {
 		'visibleDays',
 		'visibleWeeks',
 		'weekendDays',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -69,7 +70,7 @@ class calendar_monthviewMetaData {
 	inputs: calendar_monthviewMetaData.INPUTNAMES,
 	outputs: calendar_monthviewMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_monthview)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_monthview extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

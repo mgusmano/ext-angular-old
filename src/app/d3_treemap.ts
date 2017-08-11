@@ -99,6 +99,7 @@ class d3_treemapMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -160,7 +161,7 @@ class d3_treemapMetaData {
 	inputs: d3_treemapMetaData.INPUTNAMES,
 	outputs: d3_treemapMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => d3_treemap)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class d3_treemap extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -1,11 +1,9 @@
-angular2-extjs
-
-Ext JS Bridge for Angular2 (The Bridge)
+ExtAngular
 =======
 
-The Bridge Works with the Sencha Ext JS 6.2 modern toolkit
+The ExtAngular with the Sencha Ext JS 6.2 modern toolkit
 
-To try The Bridge with a test Angular2 application:
+To try The Bridge with a test Angular application:
 
 Install Angular-CLI  (instructions at: https://github.com/angular/angular-cli)
 
@@ -19,8 +17,8 @@ in the ExtAngular folder
 When finished, run the following commands on the command line:
 
 	cd ExtTest
-	npm install angular2-extjs --save
-	cp -r node_modules/angular2-extjs/demo/ src/
+	npm install ext-angular --save
+	cp -r node_modules/ext-angular/demo/ src/
 
 Replace styles and scripts section in ExtTest/angular-cli.json 
 with what is in src/misc/angular-cli.json.txt
@@ -52,7 +50,7 @@ Build Ext JS application
 
 	sencha app build testing
 
-Copy build folder of Ext JS app to app folder of Angular2 test app (ExtTest)
+Copy build folder of Ext JS app to app folder of Angular test app (ExtTest)
 
 	cp -r build/ ../ExtTest/src/app/build/
 

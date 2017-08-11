@@ -65,6 +65,7 @@ surfaceMetaData.INPUTNAMES = [
     'width',
     'x',
     'y',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -103,7 +104,7 @@ surface = surface_1 = __decorate([
         inputs: surfaceMetaData.INPUTNAMES,
         outputs: surfaceMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return surface_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], surface);

@@ -107,6 +107,7 @@ class nestedlistMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -196,7 +197,7 @@ class nestedlistMetaData {
 	inputs: nestedlistMetaData.INPUTNAMES,
 	outputs: nestedlistMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => nestedlist)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class nestedlist extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

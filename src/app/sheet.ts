@@ -102,6 +102,7 @@ class sheetMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -171,7 +172,7 @@ class sheetMetaData {
 	inputs: sheetMetaData.INPUTNAMES,
 	outputs: sheetMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => sheet)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class sheet extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

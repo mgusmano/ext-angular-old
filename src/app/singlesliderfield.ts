@@ -97,6 +97,7 @@ class singlesliderfieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -166,7 +167,7 @@ class singlesliderfieldMetaData {
 	inputs: singlesliderfieldMetaData.INPUTNAMES,
 	outputs: singlesliderfieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => singlesliderfield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class singlesliderfield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

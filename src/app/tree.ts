@@ -134,6 +134,7 @@ class treeMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -263,7 +264,7 @@ class treeMetaData {
 	inputs: treeMetaData.INPUTNAMES,
 	outputs: treeMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => tree)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class tree extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

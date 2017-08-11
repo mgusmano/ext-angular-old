@@ -34,6 +34,7 @@ calendar_daysheaderMetaData.INPUTNAMES = [
     'format',
     'value',
     'visibleDays',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -68,7 +69,7 @@ calendar_daysheader = calendar_daysheader_1 = __decorate([
         inputs: calendar_daysheaderMetaData.INPUTNAMES,
         outputs: calendar_daysheaderMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return calendar_daysheader_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], calendar_daysheader);

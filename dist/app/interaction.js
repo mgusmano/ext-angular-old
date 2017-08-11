@@ -32,6 +32,7 @@ interactionMetaData.INPUTNAMES = [
     'enabled',
     'gesture',
     'listeners',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -66,7 +67,7 @@ interaction = interaction_1 = __decorate([
         inputs: interactionMetaData.INPUTNAMES,
         outputs: interactionMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return interaction_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], interaction);

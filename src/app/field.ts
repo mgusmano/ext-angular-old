@@ -91,6 +91,7 @@ class fieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -148,7 +149,7 @@ class fieldMetaData {
 	inputs: fieldMetaData.INPUTNAMES,
 	outputs: fieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => field)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class field extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

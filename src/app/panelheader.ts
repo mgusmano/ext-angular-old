@@ -92,6 +92,7 @@ class panelheaderMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -161,7 +162,7 @@ class panelheaderMetaData {
 	inputs: panelheaderMetaData.INPUTNAMES,
 	outputs: panelheaderMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => panelheader)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class panelheader extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -96,6 +96,7 @@ class inputMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -167,7 +168,7 @@ class inputMetaData {
 	inputs: inputMetaData.INPUTNAMES,
 	outputs: inputMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => input)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class input extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

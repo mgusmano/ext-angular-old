@@ -8,6 +8,7 @@ class drawMetaData {
 		'gradients',
 		'resizeHandler',
 		'sprites',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -43,7 +44,7 @@ class drawMetaData {
 	inputs: drawMetaData.INPUTNAMES,
 	outputs: drawMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => draw)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class draw extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

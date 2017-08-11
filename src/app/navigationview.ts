@@ -89,6 +89,7 @@ class navigationviewMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -164,7 +165,7 @@ class navigationviewMetaData {
 	inputs: navigationviewMetaData.INPUTNAMES,
 	outputs: navigationviewMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => navigationview)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class navigationview extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -10,6 +10,7 @@ class calendar_monthMetaData {
 		'value',
 		'view',
 		'visibleWeeks',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -53,7 +54,7 @@ class calendar_monthMetaData {
 	inputs: calendar_monthMetaData.INPUTNAMES,
 	outputs: calendar_monthMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_month)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_month extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

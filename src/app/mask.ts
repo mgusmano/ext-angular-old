@@ -76,6 +76,7 @@ class maskMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -135,7 +136,7 @@ class maskMetaData {
 	inputs: maskMetaData.INPUTNAMES,
 	outputs: maskMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => mask)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class mask extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

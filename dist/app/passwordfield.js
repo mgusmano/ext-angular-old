@@ -125,6 +125,7 @@ passwordfieldMetaData.INPUTNAMES = [
     'xtype',
     'y',
     'zIndex',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -215,7 +216,7 @@ passwordfield = passwordfield_1 = __decorate([
         inputs: passwordfieldMetaData.INPUTNAMES,
         outputs: passwordfieldMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return passwordfield_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], passwordfield);

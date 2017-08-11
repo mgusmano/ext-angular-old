@@ -108,6 +108,7 @@ class dataviewMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -209,7 +210,7 @@ class dataviewMetaData {
 	inputs: dataviewMetaData.INPUTNAMES,
 	outputs: dataviewMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => dataview)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class dataview extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

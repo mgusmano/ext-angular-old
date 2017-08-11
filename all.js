@@ -16,6 +16,7 @@ function launch(data) {
 	var declarations = "";
 	var allClasses = "";
 	var o = {};
+	var numClasses = 0;
 	for (i = 0; i < items.length; i++) { 
 		o = items[i];
 		//console.log(o.name + '-' + o.alias);
@@ -55,6 +56,7 @@ function launch(data) {
 					configsArray[0].items.forEach(function (config, index, array) {
 						sINPUTS = sINPUTS + tab + tab + "'" + config.name + "'" + "," + newLine;
 					});
+					sINPUTS = sINPUTS + tab + tab + "'" + "flex"+ "'" + "," + newLine;
 					sINPUTS = sINPUTS + tab + tab + "'" + "platformConfig"+ "'" + "," + newLine;
 					sINPUTS = sINPUTS + tab + tab + "'" + "responsiveConfig"+ "'" + "," + newLine;
 					sINPUTS = sINPUTS + tab + tab + "'" + "fitToParent"+ "'" + "," + newLine;
@@ -85,7 +87,8 @@ function launch(data) {
 				var className =  o.xtype.replace(/-/g, "_")
 				allClasses = allClasses + tab + "'" + o.name + "'," + tab + "// xtype='" + className + "'" + newLine;
 
-				console.log(className)
+				numClasses++
+				console.log(numClasses + ' - ' + className)
 
 				fs.writeFile(folder + prefix + '' + className + '.ts', doClass(o.xtype, sINPUTS, sOUTPUTS, sOUTPUTNAMES, prefix, o.name, className), 
 					function(err) {if(err) { return console.log(err); }
@@ -141,7 +144,7 @@ ${sOUTPUTNAMES}];
 	inputs: ${prefix}${className}MetaData.INPUTNAMES,
 	outputs: ${prefix}${className}MetaData.OUTPUTNAMES,
 	providers: [{provide: ${prefix}base, useExisting: forwardRef(() => ${prefix}${className})}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class ${prefix}${className} extends ${prefix}base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {
@@ -337,7 +340,7 @@ class extMetaData {
 	inputs: extMetaData.INPUTNAMES.concat('config'),
 	outputs: extMetaData.OUTPUTNAMES.concat('ready'),
 	providers: [{provide: ${prefix}base, useExisting: forwardRef(() => ${prefix})}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class ${prefix} extends ${prefix}base implements OnInit {
 	constructor(myElement: ElementRef, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef) {
@@ -366,7 +369,7 @@ class ExtNgComponentMetaData {
 	inputs: ExtNgComponentMetaData.INPUTNAMES.concat('config'),
 	outputs: ExtNgComponentMetaData.OUTPUTNAMES.concat('ready'),
 	providers: [{provide: ${prefix}base, useExisting: forwardRef(() => ${prefix}ngcomponent)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class ${prefix}ngcomponent  extends ${prefix}base {
 	//@ContentChildren(${prefix}base,{read:ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;

@@ -130,6 +130,7 @@ class gridMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -247,7 +248,7 @@ class gridMetaData {
 	inputs: gridMetaData.INPUTNAMES,
 	outputs: gridMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => grid)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class grid extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

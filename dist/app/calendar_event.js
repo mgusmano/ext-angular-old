@@ -39,6 +39,7 @@ calendar_eventMetaData.INPUTNAMES = [
     'title',
     'touchAction',
     'view',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -73,7 +74,7 @@ calendar_event = calendar_event_1 = __decorate([
         inputs: calendar_eventMetaData.INPUTNAMES,
         outputs: calendar_eventMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return calendar_event_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], calendar_event);

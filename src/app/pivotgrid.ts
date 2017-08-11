@@ -139,6 +139,7 @@ class pivotgridMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -320,7 +321,7 @@ class pivotgridMetaData {
 	inputs: pivotgridMetaData.INPUTNAMES,
 	outputs: pivotgridMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => pivotgrid)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class pivotgrid extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -99,6 +99,7 @@ class togglefieldMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -166,7 +167,7 @@ class togglefieldMetaData {
 	inputs: togglefieldMetaData.INPUTNAMES,
 	outputs: togglefieldMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => togglefield)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class togglefield extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -88,6 +88,7 @@ class viewportMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -161,7 +162,7 @@ class viewportMetaData {
 	inputs: viewportMetaData.INPUTNAMES,
 	outputs: viewportMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => viewport)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class viewport extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -114,6 +114,7 @@ class datepickerMetaData {
 		'yearText',
 		'yearTo',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -189,7 +190,7 @@ class datepickerMetaData {
 	inputs: datepickerMetaData.INPUTNAMES,
 	outputs: datepickerMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => datepicker)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class datepicker extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

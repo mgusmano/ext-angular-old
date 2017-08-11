@@ -96,6 +96,7 @@ class textareainputMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -167,7 +168,7 @@ class textareainputMetaData {
 	inputs: textareainputMetaData.INPUTNAMES,
 	outputs: textareainputMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => textareainput)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class textareainput extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

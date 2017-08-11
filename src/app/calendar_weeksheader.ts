@@ -10,6 +10,7 @@ class calendar_weeksheaderMetaData {
 		'format',
 		'value',
 		'visibleDays',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -27,7 +28,7 @@ class calendar_weeksheaderMetaData {
 	inputs: calendar_weeksheaderMetaData.INPUTNAMES,
 	outputs: calendar_weeksheaderMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_weeksheader)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_weeksheader extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -9,6 +9,7 @@ class calendar_form_addMetaData {
 		'event',
 		'title',
 		'view',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -32,7 +33,7 @@ class calendar_form_addMetaData {
 	inputs: calendar_form_addMetaData.INPUTNAMES,
 	outputs: calendar_form_addMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_form_add)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_form_add extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

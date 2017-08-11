@@ -11,7 +11,7 @@ class ExtNgComponentMetaData {
 	inputs: ExtNgComponentMetaData.INPUTNAMES.concat('config'),
 	outputs: ExtNgComponentMetaData.OUTPUTNAMES.concat('ready'),
 	providers: [{provide: base, useExisting: forwardRef(() => ngcomponent)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class ngcomponent  extends base {
 	//@ContentChildren(base,{read:ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;

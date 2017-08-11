@@ -36,6 +36,7 @@ class widgetMetaData {
 		'width',
 		'x',
 		'y',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -57,7 +58,7 @@ class widgetMetaData {
 	inputs: widgetMetaData.INPUTNAMES,
 	outputs: widgetMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => widget)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class widget extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

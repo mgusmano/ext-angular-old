@@ -84,6 +84,7 @@ class mediaMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -155,7 +156,7 @@ class mediaMetaData {
 	inputs: mediaMetaData.INPUTNAMES,
 	outputs: mediaMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => media)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class media extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

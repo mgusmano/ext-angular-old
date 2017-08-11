@@ -76,6 +76,7 @@ class titleMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -133,7 +134,7 @@ class titleMetaData {
 	inputs: titleMetaData.INPUTNAMES,
 	outputs: titleMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => title)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class title extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

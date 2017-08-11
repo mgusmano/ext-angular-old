@@ -9,6 +9,7 @@ class calendar_dayMetaData {
 		'eventRelayers',
 		'view',
 		'visibleDays',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -58,7 +59,7 @@ class calendar_dayMetaData {
 	inputs: calendar_dayMetaData.INPUTNAMES,
 	outputs: calendar_dayMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => calendar_day)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class calendar_day extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -90,6 +90,7 @@ class tabbarMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -161,7 +162,7 @@ class tabbarMetaData {
 	inputs: tabbarMetaData.INPUTNAMES,
 	outputs: tabbarMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => tabbar)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class tabbar extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

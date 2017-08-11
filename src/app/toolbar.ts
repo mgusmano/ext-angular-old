@@ -88,6 +88,7 @@ class toolbarMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -157,7 +158,7 @@ class toolbarMetaData {
 	inputs: toolbarMetaData.INPUTNAMES,
 	outputs: toolbarMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => toolbar)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class toolbar extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

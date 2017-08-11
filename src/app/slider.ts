@@ -85,6 +85,7 @@ class sliderMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -150,7 +151,7 @@ class sliderMetaData {
 	inputs: sliderMetaData.INPUTNAMES,
 	outputs: sliderMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => slider)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class slider extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

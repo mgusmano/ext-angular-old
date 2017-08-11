@@ -90,6 +90,7 @@ class fieldsetMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -159,7 +160,7 @@ class fieldsetMetaData {
 	inputs: fieldsetMetaData.INPUTNAMES,
 	outputs: fieldsetMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => fieldset)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class fieldset extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

@@ -34,6 +34,7 @@ calendar_multiviewMetaData.INPUTNAMES = [
     'timezoneOffset',
     'value',
     'views',
+    'flex',
     'platformConfig',
     'responsiveConfig',
     'fitToParent',
@@ -68,7 +69,7 @@ calendar_multiview = calendar_multiview_1 = __decorate([
         inputs: calendar_multiviewMetaData.INPUTNAMES,
         outputs: calendar_multiviewMetaData.OUTPUTNAMES,
         providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return calendar_multiview_1; }) }],
-        template: '<template #dynamic></template>'
+        template: '<ng-template #dynamic></ng-template>'
     }),
     __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
 ], calendar_multiview);

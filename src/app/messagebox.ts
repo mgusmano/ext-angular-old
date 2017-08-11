@@ -108,6 +108,7 @@ class messageboxMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -177,7 +178,7 @@ class messageboxMetaData {
 	inputs: messageboxMetaData.INPUTNAMES,
 	outputs: messageboxMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => messagebox)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class messagebox extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

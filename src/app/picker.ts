@@ -108,6 +108,7 @@ class pickerMetaData {
 		'xtype',
 		'y',
 		'zIndex',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -183,7 +184,7 @@ class pickerMetaData {
 	inputs: pickerMetaData.INPUTNAMES,
 	outputs: pickerMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => picker)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class picker extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {

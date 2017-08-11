@@ -21,6 +21,7 @@ class spacefillingMetaData {
 		'store',
 		'style',
 		'theme',
+		'flex',
 		'platformConfig',
 		'responsiveConfig',
 		'fitToParent',
@@ -80,7 +81,7 @@ class spacefillingMetaData {
 	inputs: spacefillingMetaData.INPUTNAMES,
 	outputs: spacefillingMetaData.OUTPUTNAMES,
 	providers: [{provide: base, useExisting: forwardRef(() => spacefilling)}],
-	template: '<template #dynamic></template>'
+	template: '<ng-template #dynamic></ng-template>'
 })
 export class spacefilling extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {
