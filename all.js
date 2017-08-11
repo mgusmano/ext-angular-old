@@ -5,7 +5,6 @@ launch(data);
 function launch(data) {
 	var items = data.global.items;
 	var commaOrBlank = "";
-	var prefix = "";
 	var dist = "app/";
 	var root = "src/";
 	var folder = root + dist;
@@ -19,10 +18,6 @@ function launch(data) {
 	var numClasses = 0;
 	for (i = 0; i < items.length; i++) { 
 		o = items[i];
-		//console.log(o.name + '-' + o.alias);
-		// if (o.alias != undefined) {
-		// 	console.log(o.alias);
-		// }
 		if (o.alias != undefined && 
 				o.alias.substring(0, 6) == 'widget' && 
 				o.alias.substring(7).indexOf('.') == -1 && 
@@ -40,9 +35,9 @@ function launch(data) {
 				o.alias.substring(7).indexOf('pivotconfig') == -1 && 
 				o.alias.indexOf(',') == -1) 
 			{
-			if (o.alias.indexOf('calendar-day') != -1) {
-//				debugger;
-			}
+
+			// if (o.alias.indexOf('calendar-day') != -1) {
+			// }
 
 			o.xtype = o.alias.substring(o.alias.indexOf(".") + 1);
 
@@ -90,47 +85,47 @@ function launch(data) {
 				numClasses++
 				console.log(numClasses + ' - ' + className)
 
-				fs.writeFile(folder + prefix + '' + className + '.ts', doClass(o.xtype, sINPUTS, sOUTPUTS, sOUTPUTNAMES, prefix, o.name, className), 
+				fs.writeFile(folder + className + '.ts', doClass(o.xtype, sINPUTS, sOUTPUTS, sOUTPUTNAMES, o.name, className), 
 					function(err) {if(err) { return console.log(err); }
 				});
 
-				imports = imports + "import { " + prefix + className + " } from './" + prefix + "" + className + "';" + newLine;
-				exports = exports + tab + tab + prefix + className + "," + newLine;
-				declarations = declarations + tab + tab + prefix + className + "," + newLine;
+				imports = imports + "import { " + className + " } from './" + className + "';" + newLine;
+				exports = exports + tab + tab + className + "," + newLine;
+				declarations = declarations + tab + tab + className + "," + newLine;
 			}
 		}
 	}
 
-	fs.writeFile(folder + prefix + '' + 'base' + '.ts', doExtBase(prefix), 
+	fs.writeFile(folder + 'base' + '.ts', doExtBase(), 
 		function(err) {if(err){return console.log(err);}
 	});
-	// fs.writeFile(folder + prefix + '' + 'class' + '.ts', doExtClass(prefix), 
+	// fs.writeFile(folder  + 'class' + '.ts', doExtClass(), 
 	// 	function(err) {if(err){return console.log(err);}
 	// });
-	// fs.writeFile(folder + prefix + '.ts', doExt(prefix), 
+	// fs.writeFile(folder  + '.ts', doExt(), 
 	// 	function(err) {if(err){return console.log(err);}
 	// });
-	fs.writeFile(folder + prefix + '' + 'ngcomponent' + '.ts', doExtNgComponent(prefix), 
-		function(err) {if(err){return console.log(err);}
-	});
+	// fs.writeFile(folder  + 'ngcomponent' + '.ts', doExtNgComponent(), 
+	// 	function(err) {if(err){return console.log(err);}
+	// });
 	fs.writeFile('demo/misc/' + 'app' + '.js', doAppJS(allClasses),
 		function(err) {if(err){return console.log(err);}
 	});
-	fs.writeFile(root + 'index' + '.ts', doIndex(dist, prefix),
+	fs.writeFile(root + 'index' + '.ts', doIndex(dist),
 		function(err) {if(err){return console.log(err);}
 	});
 	exports = exports.substring(0, exports.length - 2); exports = exports + newLine;
 	declarations = declarations.substring(0, declarations.length - 2); declarations = declarations + newLine;
-	fs.writeFile(folder + prefix + '' + 'module' + '.ts', doModule(imports, exports, declarations, prefix), 
+	fs.writeFile(folder + 'ExtAngularModule' + '.ts', doModule(imports, exports, declarations), 
 		function(err) {if(err) { return console.log(err); }
 	});
 }
 
-function doClass(xtype, sINPUTS, sOUTPUTS, sOUTPUTNAMES, prefix, name, className) {
+function doClass(xtype, sINPUTS, sOUTPUTS, sOUTPUTNAMES, name, className) {
 return `import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
-import { ${prefix}base } from './${prefix}base';
+import { base } from './base';
 // Ext Class - ${name}
-class ${prefix}${className}MetaData {
+class ${className}MetaData {
 	public static XTYPE: string = '${xtype}';
 	public static INPUTNAMES: string[] = [
 ${sINPUTS}];
@@ -140,21 +135,21 @@ ${sOUTPUTS}];
 ${sOUTPUTNAMES}];
 }
 @Component({
-  selector: ${prefix}${className}MetaData.XTYPE,
-	inputs: ${prefix}${className}MetaData.INPUTNAMES,
-	outputs: ${prefix}${className}MetaData.OUTPUTNAMES,
-	providers: [{provide: ${prefix}base, useExisting: forwardRef(() => ${prefix}${className})}],
+  selector: ${className}MetaData.XTYPE,
+	inputs: ${className}MetaData.INPUTNAMES,
+	outputs: ${className}MetaData.OUTPUTNAMES,
+	providers: [{provide: base, useExisting: forwardRef(() => ${className})}],
 	template: '<ng-template #dynamic></ng-template>'
 })
-export class ${prefix}${className} extends ${prefix}base {
+export class ${className} extends base {
 	constructor(eRef:ElementRef,resolver:ComponentFactoryResolver,vcRef:ViewContainerRef) {
-		super(eRef,resolver,vcRef,${prefix}${className}MetaData);
+		super(eRef,resolver,vcRef,${className}MetaData);
 	}
-	//@ContentChildren(${prefix}base,{read:ViewContainerRef}) extbaseRef:QueryList<ViewContainerRef>;
-	@ContentChildren(${prefix}base,{read: ${prefix}base}) extbaseRef: QueryList<${prefix}base>;
+	//@ContentChildren(base,{read:ViewContainerRef}) extbaseRef:QueryList<ViewContainerRef>;
+	@ContentChildren(base,{read: base}) extbaseRef: QueryList<base>;
 	@ViewChild('dynamic',{read:ViewContainerRef}) dynamicRef:ViewContainerRef;
 	ngAfterContentInit() {this.AfterContentInit(this.extbaseRef);}
-	ngOnInit() {this.OnInit(this.dynamicRef,${prefix}${className}MetaData);}
+	ngOnInit() {this.OnInit(this.dynamicRef,${className}MetaData);}
 }
 `;
 };
@@ -179,40 +174,38 @@ ${allClasses}]);
 `
 }
 
-function doIndex(dist, prefix) {
-return `export * from './${dist}${prefix}module'
-//export * from './${dist}${prefix}class'
+function doIndex(dist) {
+return `export * from './${dist}ExtAngularModule'
 `
 }
 
-
-function doModule(imports, exports, declarations, prefix) {
+function doModule(imports, exports, declarations) {
 	return `import { NgModule } from "@angular/core";
-import { ${prefix} } from './${prefix}';
-import { ${prefix}ngcomponent } from './${prefix}ngcomponent';
-//import { ${prefix}class } from './${prefix}class';
+import {  } from './';
+import { ngcomponent } from './ngcomponent';
+//import { class } from './class';
 ${imports}
 @NgModule({
 	exports: [
-//		${prefix},
-		${prefix}ngcomponent,
+//		,
+		ngcomponent,
 ${exports} ],
 	declarations: [
-//		${prefix},
-		${prefix}ngcomponent,
+//		,
+		ngcomponent,
 ${declarations} ]
 })
-export class ${prefix}Module { }
+export class ExtAngularModule { }
 	`
 }
 
-function doExtBase(prefix) {
+function doExtBase() {
 	return `/// <reference path="../../node_modules/retyped-extjs-tsd-ambient/ExtJS.d.ts" />
 import {AfterContentInit,AfterViewInit,Attribute,Component,ComponentFactory,ComponentRef,ComponentFactoryResolver,ContentChildren,
 	ElementRef,EventEmitter,OnInit,QueryList,Type,ViewChild,ViewContainerRef
 } from '@angular/core';
 
-export class ${prefix}base{
+export class base{
 	public extjsObject: any;
 	private rootElement: any;
 	private listeners = {};
@@ -259,12 +252,34 @@ export class ${prefix}base{
 		let me: any = this;
 		let o: any = {};
 		o.listeners = {};
-		var eventtasks = this.myElement.nativeElement.__zone_symbol__eventTasks;
-		if (eventtasks != undefined) {
-			eventtasks.forEach(function (eventtask, index, array) {
-				var eventIndex = metadata.OUTPUTNAMES.indexOf(eventtask.data.eventName);
+
+
+		// var eventtasks = this.myElement.nativeElement.__zone_symbol__eventTasks;
+		// if (eventtasks != undefined) {
+		// 	eventtasks.forEach(function (eventtask, index, array) {
+		// 		var eventIndex = metadata.OUTPUTNAMES.indexOf(eventtask.data.eventName);
+		// 		if (eventIndex != -1) {
+		// 			var eventname = eventtask.data.eventName;
+		// 			var eventparameters = metadata.OUTPUTS[eventIndex].parameters
+		// 			o.listeners[eventname] = function() {
+		// 					let parameters: any = eventparameters;
+		// 					let parms = parameters.split(',');
+		// 					let args = Array.prototype.slice.call(arguments);
+		// 					let o: any = {};
+		// 					for (let i = 0, j = parms.length; i < j; i++ ) {
+		// 							o[parms[i]] = args[i];
+		// 					}
+		// 					me[eventname].next(o);
+		// 			};
+		// 		}
+		// 	});
+		// }
+
+		var eventnames = metadata.OUTPUTNAMES;
+		if (eventnames != undefined) {
+			eventnames.forEach(function (eventname, index, array) {
+				var eventIndex = metadata.OUTPUTNAMES.indexOf(eventname);
 				if (eventIndex != -1) {
-					var eventname = eventtask.data.eventName;
 					var eventparameters = metadata.OUTPUTS[eventIndex].parameters
 					o.listeners[eventname] = function() {
 							let parameters: any = eventparameters;
@@ -279,6 +294,7 @@ export class ${prefix}base{
 				}
 			});
 		}
+
 
 		o.xtype = me.xtype;
 		if (me.xtype != '') { o.xtype = me.xtype; }
@@ -326,9 +342,9 @@ export class ${prefix}base{
 }
 
 
-function doExt(prefix) {
+function doExt() {
 	return `import { Component, OnInit, ViewChild, ElementRef, Attribute, ComponentFactory, ComponentFactoryResolver, ViewContainerRef, forwardRef, ContentChildren, QueryList, Type } from '@angular/core';
-import { ${prefix}base } from './${prefix}base';
+import { base } from './base';
 class extMetaData {
 	public static XTYPE: string = '';
 	public static INPUTNAMES: string[] = ['xtype','fittoparent'];
@@ -336,18 +352,18 @@ class extMetaData {
 	public static OUTPUTNAMES: string[] = ['click'];
 }
 @Component({
-  selector: '${prefix}' + extMetaData.XTYPE,
+  selector: '' + extMetaData.XTYPE,
 	inputs: extMetaData.INPUTNAMES.concat('config'),
 	outputs: extMetaData.OUTPUTNAMES.concat('ready'),
-	providers: [{provide: ${prefix}base, useExisting: forwardRef(() => ${prefix})}],
+	providers: [{provide: base, useExisting: forwardRef(() => )}],
 	template: '<ng-template #dynamic></ng-template>'
 })
-export class ${prefix} extends ${prefix}base implements OnInit {
+export class  extends base implements OnInit {
 	constructor(myElement: ElementRef, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef) {
 		super(myElement, componentFactoryResolver, viewContainerRef, extMetaData);
 	}
-	//@ContentChildren(${prefix}base,{read: ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;
-	@ContentChildren(${prefix}base,{read: ${prefix}base}) extbaseRef: QueryList<${prefix}base>;
+	//@ContentChildren(base,{read: ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;
+	@ContentChildren(base,{read: base}) extbaseRef: QueryList<base>;
 	@ViewChild('dynamic',{read: ViewContainerRef}) dynamicRef: ViewContainerRef;
 	ngAfterContentInit() { this.AfterContentInit(this.extbaseRef); }
 	ngOnInit() { this.OnInit(this.dynamicRef); }
@@ -355,9 +371,9 @@ export class ${prefix} extends ${prefix}base implements OnInit {
 `
 }
 
-function doExtNgComponent(prefix) {
+function doExtNgComponent() {
 	return `import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
-import { ${prefix}base } from './${prefix}base';
+import { base } from './base';
 class ExtNgComponentMetaData {
 	public static XTYPE: string = 'container';
 	public static INPUTNAMES: string[] = ['selector','component','selectorParams'];
@@ -365,15 +381,15 @@ class ExtNgComponentMetaData {
 	public static OUTPUTNAMES: string[] = [];
 }
 @Component({
-  selector: '${prefix}ngcomponent',
+  selector: 'ngcomponent',
 	inputs: ExtNgComponentMetaData.INPUTNAMES.concat('config'),
 	outputs: ExtNgComponentMetaData.OUTPUTNAMES.concat('ready'),
-	providers: [{provide: ${prefix}base, useExisting: forwardRef(() => ${prefix}ngcomponent)}],
+	providers: [{provide: base, useExisting: forwardRef(() => ngcomponent)}],
 	template: '<ng-template #dynamic></ng-template>'
 })
-export class ${prefix}ngcomponent  extends ${prefix}base {
-	//@ContentChildren(${prefix}base,{read:ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;
-	@ContentChildren(${prefix}base,{read: ${prefix}base}) extbaseRef: QueryList<${prefix}base>;
+export class ngcomponent  extends base {
+	//@ContentChildren(base,{read:ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;
+	@ContentChildren(base,{read: base}) extbaseRef: QueryList<base>;
 	@ViewChild('dynamic',{read:ViewContainerRef}) dynamicRef: ViewContainerRef;
 	constructor(myElement: ElementRef, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef) {
 		super(myElement, componentFactoryResolver, viewContainerRef, ExtNgComponentMetaData);
@@ -384,8 +400,8 @@ export class ${prefix}ngcomponent  extends ${prefix}base {
 `
 }
 
-function doExtClass(prefix) {
-	return `export class ${prefix}class {
+function doExtClass() {
+	return `export class class {
 	public className: any;
 	public extend: any;
 	public defineConfig: any;

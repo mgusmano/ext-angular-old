@@ -316,5 +316,5 @@ import { widget } from './widget';
 		widget
  ]
 })
-export class Module { }
+export class ExtAngularModule { }
 	

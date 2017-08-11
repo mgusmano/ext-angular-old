@@ -50,12 +50,34 @@ export class base{
 		let me: any = this;
 		let o: any = {};
 		o.listeners = {};
-		var eventtasks = this.myElement.nativeElement.__zone_symbol__eventTasks;
-		if (eventtasks != undefined) {
-			eventtasks.forEach(function (eventtask, index, array) {
-				var eventIndex = metadata.OUTPUTNAMES.indexOf(eventtask.data.eventName);
+
+
+		// var eventtasks = this.myElement.nativeElement.__zone_symbol__eventTasks;
+		// if (eventtasks != undefined) {
+		// 	eventtasks.forEach(function (eventtask, index, array) {
+		// 		var eventIndex = metadata.OUTPUTNAMES.indexOf(eventtask.data.eventName);
+		// 		if (eventIndex != -1) {
+		// 			var eventname = eventtask.data.eventName;
+		// 			var eventparameters = metadata.OUTPUTS[eventIndex].parameters
+		// 			o.listeners[eventname] = function() {
+		// 					let parameters: any = eventparameters;
+		// 					let parms = parameters.split(',');
+		// 					let args = Array.prototype.slice.call(arguments);
+		// 					let o: any = {};
+		// 					for (let i = 0, j = parms.length; i < j; i++ ) {
+		// 							o[parms[i]] = args[i];
+		// 					}
+		// 					me[eventname].next(o);
+		// 			};
+		// 		}
+		// 	});
+		// }
+
+		var eventnames = metadata.OUTPUTNAMES;
+		if (eventnames != undefined) {
+			eventnames.forEach(function (eventname, index, array) {
+				var eventIndex = metadata.OUTPUTNAMES.indexOf(eventname);
 				if (eventIndex != -1) {
-					var eventname = eventtask.data.eventName;
 					var eventparameters = metadata.OUTPUTS[eventIndex].parameters
 					o.listeners[eventname] = function() {
 							let parameters: any = eventparameters;
@@ -70,6 +92,7 @@ export class base{
 				}
 			});
 		}
+
 
 		o.xtype = me.xtype;
 		if (me.xtype != '') { o.xtype = me.xtype; }

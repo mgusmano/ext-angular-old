@@ -37,12 +37,11 @@ var base = (function () {
         var me = this;
         var o = {};
         o.listeners = {};
-        var eventtasks = this.myElement.nativeElement.__zone_symbol__eventTasks;
-        if (eventtasks != undefined) {
-            eventtasks.forEach(function (eventtask, index, array) {
-                var eventIndex = metadata.OUTPUTNAMES.indexOf(eventtask.data.eventName);
+        var eventnames = metadata.OUTPUTNAMES;
+        if (eventnames != undefined) {
+            eventnames.forEach(function (eventname, index, array) {
+                var eventIndex = metadata.OUTPUTNAMES.indexOf(eventname);
                 if (eventIndex != -1) {
-                    var eventname = eventtask.data.eventName;
                     var eventparameters = metadata.OUTPUTS[eventIndex].parameters;
                     o.listeners[eventname] = function () {
                         var parameters = eventparameters;

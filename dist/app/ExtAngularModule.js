@@ -109,12 +109,12 @@ var gauge_1 = require("./gauge");
 var video_1 = require("./video");
 var viewport_1 = require("./viewport");
 var widget_1 = require("./widget");
-var Module = (function () {
-    function Module() {
+var ExtAngularModule = (function () {
+    function ExtAngularModule() {
     }
-    return Module;
+    return ExtAngularModule;
 }());
-Module = __decorate([
+ExtAngularModule = __decorate([
     core_1.NgModule({
         exports: [
             ngcomponent_1.ngcomponent,
@@ -325,5 +325,5 @@ Module = __decorate([
             widget_1.widget
         ]
     })
-], Module);
-exports.Module = Module;
+], ExtAngularModule);
+exports.ExtAngularModule = ExtAngularModule;
