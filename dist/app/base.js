@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
+import { EventEmitter } from '@angular/core';
 var base = (function () {
     function base(myElement, componentFactoryResolver, viewContainerRef, metaData) {
         var _this = this;
@@ -12,9 +10,9 @@ var base = (function () {
         this.xtype = metaData.XTYPE;
         this.inputs = metaData.INPUTNAMES;
         this.rootElement = myElement.nativeElement;
-        this['ready'] = new core_1.EventEmitter();
+        this['ready'] = new EventEmitter();
         metaData.OUTPUTS.forEach(function (event, n) {
-            _this[event.name] = new core_1.EventEmitter();
+            _this[event.name] = new EventEmitter();
         });
     }
     base.prototype.AfterContentInit = function (ExtJSBaseRef) {
@@ -99,4 +97,4 @@ var base = (function () {
     };
     return base;
 }());
-exports.base = base;
+export { base };

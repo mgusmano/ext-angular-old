@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -18,9 +17,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var base_1 = require("./base");
+import { Component, ViewChild, ElementRef, ComponentFactoryResolver, ViewContainerRef, forwardRef, ContentChildren, QueryList } from '@angular/core';
+import { base } from './base';
 var treeMetaData = (function () {
     function treeMetaData() {
     }
@@ -290,24 +288,24 @@ var tree = tree_1 = (function (_super) {
     tree.prototype.ngAfterContentInit = function () { this.AfterContentInit(this.extbaseRef); };
     tree.prototype.ngOnInit = function () { this.OnInit(this.dynamicRef, treeMetaData); };
     return tree;
-}(base_1.base));
+}(base));
 __decorate([
-    core_1.ContentChildren(base_1.base, { read: base_1.base }),
-    __metadata("design:type", core_1.QueryList)
+    ContentChildren(base, { read: base }),
+    __metadata("design:type", QueryList)
 ], tree.prototype, "extbaseRef", void 0);
 __decorate([
-    core_1.ViewChild('dynamic', { read: core_1.ViewContainerRef }),
-    __metadata("design:type", core_1.ViewContainerRef)
+    ViewChild('dynamic', { read: ViewContainerRef }),
+    __metadata("design:type", ViewContainerRef)
 ], tree.prototype, "dynamicRef", void 0);
 tree = tree_1 = __decorate([
-    core_1.Component({
+    Component({
         selector: treeMetaData.XTYPE,
         inputs: treeMetaData.INPUTNAMES,
         outputs: treeMetaData.OUTPUTNAMES,
-        providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return tree_1; }) }],
+        providers: [{ provide: base, useExisting: forwardRef(function () { return tree_1; }) }],
         template: '<ng-template #dynamic></ng-template>'
     }),
-    __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
+    __metadata("design:paramtypes", [ElementRef, ComponentFactoryResolver, ViewContainerRef])
 ], tree);
-exports.tree = tree;
+export { tree };
 var tree_1;

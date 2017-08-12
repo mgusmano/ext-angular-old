@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -18,9 +17,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var base_1 = require("./base");
+import { Component, ViewChild, ElementRef, ComponentFactoryResolver, ViewContainerRef, forwardRef, ContentChildren, QueryList } from '@angular/core';
+import { base } from './base';
 var passwordfieldMetaData = (function () {
     function passwordfieldMetaData() {
     }
@@ -201,24 +199,24 @@ var passwordfield = passwordfield_1 = (function (_super) {
     passwordfield.prototype.ngAfterContentInit = function () { this.AfterContentInit(this.extbaseRef); };
     passwordfield.prototype.ngOnInit = function () { this.OnInit(this.dynamicRef, passwordfieldMetaData); };
     return passwordfield;
-}(base_1.base));
+}(base));
 __decorate([
-    core_1.ContentChildren(base_1.base, { read: base_1.base }),
-    __metadata("design:type", core_1.QueryList)
+    ContentChildren(base, { read: base }),
+    __metadata("design:type", QueryList)
 ], passwordfield.prototype, "extbaseRef", void 0);
 __decorate([
-    core_1.ViewChild('dynamic', { read: core_1.ViewContainerRef }),
-    __metadata("design:type", core_1.ViewContainerRef)
+    ViewChild('dynamic', { read: ViewContainerRef }),
+    __metadata("design:type", ViewContainerRef)
 ], passwordfield.prototype, "dynamicRef", void 0);
 passwordfield = passwordfield_1 = __decorate([
-    core_1.Component({
+    Component({
         selector: passwordfieldMetaData.XTYPE,
         inputs: passwordfieldMetaData.INPUTNAMES,
         outputs: passwordfieldMetaData.OUTPUTNAMES,
-        providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return passwordfield_1; }) }],
+        providers: [{ provide: base, useExisting: forwardRef(function () { return passwordfield_1; }) }],
         template: '<ng-template #dynamic></ng-template>'
     }),
-    __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
+    __metadata("design:paramtypes", [ElementRef, ComponentFactoryResolver, ViewContainerRef])
 ], passwordfield);
-exports.passwordfield = passwordfield;
+export { passwordfield };
 var passwordfield_1;

@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -18,9 +17,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var base_1 = require("./base");
+import { Component, ViewChild, ElementRef, ComponentFactoryResolver, ViewContainerRef, forwardRef, ContentChildren, QueryList } from '@angular/core';
+import { base } from './base';
 var calendar_listMetaData = (function () {
     function calendar_listMetaData() {
     }
@@ -49,24 +47,24 @@ var calendar_list = calendar_list_1 = (function (_super) {
     calendar_list.prototype.ngAfterContentInit = function () { this.AfterContentInit(this.extbaseRef); };
     calendar_list.prototype.ngOnInit = function () { this.OnInit(this.dynamicRef, calendar_listMetaData); };
     return calendar_list;
-}(base_1.base));
+}(base));
 __decorate([
-    core_1.ContentChildren(base_1.base, { read: base_1.base }),
-    __metadata("design:type", core_1.QueryList)
+    ContentChildren(base, { read: base }),
+    __metadata("design:type", QueryList)
 ], calendar_list.prototype, "extbaseRef", void 0);
 __decorate([
-    core_1.ViewChild('dynamic', { read: core_1.ViewContainerRef }),
-    __metadata("design:type", core_1.ViewContainerRef)
+    ViewChild('dynamic', { read: ViewContainerRef }),
+    __metadata("design:type", ViewContainerRef)
 ], calendar_list.prototype, "dynamicRef", void 0);
 calendar_list = calendar_list_1 = __decorate([
-    core_1.Component({
+    Component({
         selector: calendar_listMetaData.XTYPE,
         inputs: calendar_listMetaData.INPUTNAMES,
         outputs: calendar_listMetaData.OUTPUTNAMES,
-        providers: [{ provide: base_1.base, useExisting: core_1.forwardRef(function () { return calendar_list_1; }) }],
+        providers: [{ provide: base, useExisting: forwardRef(function () { return calendar_list_1; }) }],
         template: '<ng-template #dynamic></ng-template>'
     }),
-    __metadata("design:paramtypes", [core_1.ElementRef, core_1.ComponentFactoryResolver, core_1.ViewContainerRef])
+    __metadata("design:paramtypes", [ElementRef, ComponentFactoryResolver, ViewContainerRef])
 ], calendar_list);
-exports.calendar_list = calendar_list;
+export { calendar_list };
 var calendar_list_1;
