@@ -1,6 +1,6 @@
 {
   "name": "ext-angular",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "ExtAngular",
   "repository": {
     "type": "git",
@@ -23,8 +23,8 @@
   "author": "Sencha",
   "license": "MIT",
   "dependencies": {
-		"@types/extjs": "4.2.31",
-		"@types/core-js":"0.9.42",
+    "@types/extjs": "4.2.31",
+    "@types/core-js": "0.9.42",
     "@angular/core": "^4.3.3",
     "@angular/common": "^4.3.3",
     "@angular/platform-browser": "^4.3.3",
