@@ -23,6 +23,8 @@
   "author": "Sencha",
   "license": "MIT",
   "dependencies": {
+		"@types/extjs": "4.2.31",
+		"@types/core-js":"0.9.42",
     "@angular/core": "^4.3.3",
     "@angular/common": "^4.3.3",
     "@angular/platform-browser": "^4.3.3",

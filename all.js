@@ -92,9 +92,9 @@ function launch(data) {
 	fs.writeFile(folder + 'base' + '.ts', doExtBase(), 
 		function(err) {if(err){return console.log(err);}
 	});
-	fs.writeFile('demo/misc/' + 'app' + '.js', doAppJS(allClasses),
-		function(err) {if(err){return console.log(err);}
-	});
+	// fs.writeFile('demo/misc/' + 'app' + '.js', doAppJS(allClasses),
+	// 	function(err) {if(err){return console.log(err);}
+	// });
 	fs.writeFile(root + 'index' + '.ts', doIndex(dist),
 		function(err) {if(err){return console.log(err);}
 	});
@@ -140,7 +140,7 @@ export class ${className} extends base {
 
 
 function doExtBase() {
-	return `/// <reference path="../../node_modules/retyped-extjs-tsd-ambient/ExtJS.d.ts" />
+	return `/// <reference path="../../node_modules/@types/extjs/index.d.ts" />
 import {AfterContentInit,AfterViewInit,Attribute,Component,ComponentFactory,ComponentRef,ComponentFactoryResolver,ContentChildren,
 	ElementRef,EventEmitter,OnInit,QueryList,Type,ViewChild,ViewContainerRef
 } from '@angular/core';
@@ -258,25 +258,25 @@ export class base{
 `
 }
 
-function doAppJS(allClasses) {
-	return `Ext.require([
-	'plugin.responsive',
-	'widget.widgetcell',
-	'widget.sparklineline',
-	'plugin.grideditable',
-	'plugin.gridviewoptions',
-	'plugin.pagingtoolbar',
-	'plugin.summaryrow',
-	'plugin.columnresizing',
-	'plugin.pivotconfigurator',
-	'axis.numeric',
-	'axis.category',
-	'Ext.chart.series.Series',
-	'series.bar',
-	'series.pie',
-${allClasses}]);
-`
-}
+// function doAppJS(allClasses) {
+// 	return `Ext.require([
+// 	'plugin.responsive',
+// 	'widget.widgetcell',
+// 	'widget.sparklineline',
+// 	'plugin.grideditable',
+// 	'plugin.gridviewoptions',
+// 	'plugin.pagingtoolbar',
+// 	'plugin.summaryrow',
+// 	'plugin.columnresizing',
+// 	'plugin.pivotconfigurator',
+// 	'axis.numeric',
+// 	'axis.category',
+// 	'Ext.chart.series.Series',
+// 	'series.bar',
+// 	'series.pie',
+// ${allClasses}]);
+// `
+// }
 
 function doIndex(dist) {
 return `export * from './${dist}ExtAngularModule'

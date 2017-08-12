@@ -1,4 +1,4 @@
-/// <reference path="../../node_modules/retyped-extjs-tsd-ambient/ExtJS.d.ts" />
+/// <reference path="../../node_modules/@types/extjs/index.d.ts" />
 import {AfterContentInit,AfterViewInit,Attribute,Component,ComponentFactory,ComponentRef,ComponentFactoryResolver,ContentChildren,
 	ElementRef,EventEmitter,OnInit,QueryList,Type,ViewChild,ViewContainerRef
 } from '@angular/core';
