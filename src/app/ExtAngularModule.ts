@@ -1,7 +1,5 @@
 import { NgModule } from "@angular/core";
 import {  } from './';
-import { ngcomponent } from './ngcomponent';
-//import { class } from './class';
 import { button } from './button';
 import { calendar_event } from './calendar_event';
 import { calendar_form_add } from './calendar_form_add';
@@ -106,8 +104,6 @@ import { widget } from './widget';
 
 @NgModule({
 	exports: [
-//		,
-		ngcomponent,
 		button,
 		calendar_event,
 		calendar_form_add,
@@ -211,8 +207,6 @@ import { widget } from './widget';
 		widget
  ],
 	declarations: [
-//		,
-		ngcomponent,
 		button,
 		calendar_event,
 		calendar_form_add,

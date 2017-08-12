@@ -7,7 +7,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ngcomponent_1 = require("./ngcomponent");
 var button_1 = require("./button");
 var calendar_event_1 = require("./calendar_event");
 var calendar_form_add_1 = require("./calendar_form_add");
@@ -117,7 +116,6 @@ var ExtAngularModule = (function () {
 ExtAngularModule = __decorate([
     core_1.NgModule({
         exports: [
-            ngcomponent_1.ngcomponent,
             button_1.button,
             calendar_event_1.calendar_event,
             calendar_form_add_1.calendar_form_add,
@@ -221,7 +219,6 @@ ExtAngularModule = __decorate([
             widget_1.widget
         ],
         declarations: [
-            ngcomponent_1.ngcomponent,
             button_1.button,
             calendar_event_1.calendar_event,
             calendar_form_add_1.calendar_form_add,

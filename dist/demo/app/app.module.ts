@@ -1,20 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { Module } from 'ExtAngular';
+import { ExtAngularModule } from 'ext-angular';
 
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+		AppComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-		Module
+		BrowserModule,
+		ExtAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

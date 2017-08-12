@@ -1,14 +1,42 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>ExtTest</title>
-	<base href="/">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta charset="UTF-8">
+  <meta charset="utf-8">
+	<title>TestExtAngular</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10, user-scalable=yes">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+	<base href="/">
+
+	<script>
+		//var t1 = "theme-triton"
+		//var t2 = "modern-triton"
+		var t1 = "theme-material"
+		var t2 = "material"
+//		var e = "assets/ext-6.5.1"
+		var e = "assets"
+
+		document.write('<script src=' + e + '/build/ext-modern-all.js><\/script>')
+		document.write('<link href=' + e + '/build/modern/' + t1 + '/resources/' + t1 + '-all.css rel="stylesheet" \/><\/script>')
+
+		// document.write('<link href=' + e + '/build/packages/charts/modern/modern-' + t2 + '/resources/charts-all.css rel="stylesheet" \/><\/script>')
+		// document.write('<link href=' + e + '/packages/calendar/build/modern/' + t2 + '/resources/calendar-all.css rel="stylesheet" \/><\/script>')
+		// document.write('<link href=' + e + '/packages/exporter/build/modern/resources/exporter-all-debug.css rel="stylesheet" \/><\/script>')
+		// document.write('<link href=' + e + '/packages/d3/build/modern/' + t2 + '/resources/d3-all.css rel="stylesheet" \/><\/script>')
+		// document.write('<link href=' + e + '/packages/pivot/build/modern/' + t2 + '/resources/pivot-all.css rel="stylesheet" \/><\/script>')
+		// document.write('<link href=' + e + '/packages/pivot-d3/build/modern/' + t2 + '/resources/pivot-d3-all.css rel="stylesheet" \/><\/script>')
+
+		// document.write('<script src=' + e + '/build/packages/charts/modern/charts-debug.js><\/script>')
+		// document.write('<script src=' + e + '/packages/calendar/build/modern/calendar-debug.js><\/script>')
+		// document.write('<script src=' + e + '/packages/exporter/build/modern/exporter-debug.js><\/script>')
+		// document.write('<script src=' + e + '/packages/d3/build/modern/d3-debug.js><\/script>')
+		// document.write('<script src=' + e + '/packages/pivot/build/modern/pivot-debug.js><\/script>')
+		// document.write('<script src=' + e + '/packages/pivot-d3/build/modern/pivot-d3-debug.js><\/script>')
+
+	</script>
+
 </head>
 <body>
-	<app-root>Loading...</app-root>
+	<app-root></app-root>
+	
 </body>
 </html>

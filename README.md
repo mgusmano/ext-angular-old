@@ -1,9 +1,9 @@
 ExtAngular
 =======
 
-The ExtAngular with the Sencha Ext JS 6.2 modern toolkit
+The ExtAngular with the Sencha Ext JS 6.5.1 modern toolkit
 
-To try The Bridge with a test Angular application:
+To try ExtAngular with a test Angular application:
 
 Install Angular-CLI  (instructions at: https://github.com/angular/angular-cli)
 

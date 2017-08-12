@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+
+	<button [text]="'hi'" (ready)="onReadyButton()"></button>
+
+	<grid [height]="'300'"
+		[columns]="gridcolumns" 
+		[store]="gridstore"
+		(ready)="onReadyGrid()"
+		(select)="onGridSelect($event)"
+	></grid>
+
+</div>
