@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import {  } from './';
 import { button } from './button';
 import { calendar_event } from './calendar_event';
 import { calendar_form_add } from './calendar_form_add';
@@ -311,4 +310,3 @@ import { widget } from './widget';
  ]
 })
 export class ExtAngularModule { }
-	

@@ -9,7 +9,6 @@ export class base{
 	private listeners = {};
 	private xtype: string;
 	private inputs: any;
-	//private nofit: any;
 
 	constructor(
 		private myElement: any, 

@@ -87,17 +87,19 @@ function launch(data) {
 				declarations = declarations + tab + tab + className + "," + newLine;
 			}
 		}
+		else {
+			console.log('not: ' + o.name)
+		}
 	}
 
 	fs.writeFile(folder + 'base' + '.ts', doExtBase(), 
 		function(err) {if(err){return console.log(err);}
 	});
-	// fs.writeFile('demo/misc/' + 'app' + '.js', doAppJS(allClasses),
-	// 	function(err) {if(err){return console.log(err);}
-	// });
+
 	fs.writeFile(root + 'index' + '.ts', doIndex(dist),
 		function(err) {if(err){return console.log(err);}
 	});
+
 	exports = exports.substring(0, exports.length - 2); exports = exports + newLine;
 	declarations = declarations.substring(0, declarations.length - 2); declarations = declarations + newLine;
 	fs.writeFile(folder + 'ExtAngularModule' + '.ts', doModule(imports, exports, declarations), 
@@ -138,7 +140,6 @@ export class ${className} extends base {
 `;
 };
 
-
 function doExtBase() {
 	return `/// <reference path="../../node_modules/@types/extjs/index.d.ts" />
 import {AfterContentInit,AfterViewInit,Attribute,Component,ComponentFactory,ComponentRef,ComponentFactoryResolver,ContentChildren,
@@ -151,7 +152,6 @@ export class base{
 	private listeners = {};
 	private xtype: string;
 	private inputs: any;
-	//private nofit: any;
 
 	constructor(
 		private myElement: any, 
@@ -258,6 +258,24 @@ export class base{
 `
 }
 
+function doIndex(dist) {
+return `export * from './${dist}ExtAngularModule'
+`
+}
+
+function doModule(imports, exports, declarations) {
+	return `import { NgModule } from "@angular/core";
+${imports}
+@NgModule({
+	exports: [
+${exports} ],
+	declarations: [
+${declarations} ]
+})
+export class ExtAngularModule { }
+`
+}
+
 // function doAppJS(allClasses) {
 // 	return `Ext.require([
 // 	'plugin.responsive',
@@ -277,25 +295,6 @@ export class base{
 // ${allClasses}]);
 // `
 // }
-
-function doIndex(dist) {
-return `export * from './${dist}ExtAngularModule'
-`
-}
-
-function doModule(imports, exports, declarations) {
-	return `import { NgModule } from "@angular/core";
-import {  } from './';
-${imports}
-@NgModule({
-	exports: [
-${exports} ],
-	declarations: [
-${declarations} ]
-})
-export class ExtAngularModule { }
-	`
-}
 
 // function doExt() {
 // 	return `import { Component, OnInit, ViewChild, ElementRef, Attribute, ComponentFactory, ComponentFactoryResolver, ViewContainerRef, forwardRef, ContentChildren, QueryList, Type } from '@angular/core';

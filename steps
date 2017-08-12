@@ -3,7 +3,7 @@ delete /src/
 create src/app folders
 go to ext-angular folder
 node all.js (fills src/app folders)
-tsc (creates dist folder)
+tsc (creates dist/app folder)
 cp -r demo dist/demo/
 (commit to git)
 npm version patch
