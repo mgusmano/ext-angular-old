@@ -24,6 +24,7 @@ var togglefieldMetaData = (function () {
     }
     return togglefieldMetaData;
 }());
+export { togglefieldMetaData };
 togglefieldMetaData.XTYPE = 'togglefield';
 togglefieldMetaData.INPUTNAMES = [
     'activeLabel',

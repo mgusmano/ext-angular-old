@@ -95,17 +95,17 @@ export class base{
 		me.ext = me.extjsObject;
 		me.x = me.extjsObject;
 
-		var componentFactory: ComponentFactory<any>;
-		var type: Type<any>;
+//		var componentFactory: ComponentFactory<any>;
+//		var type: Type<any>;
 
-		if (me.component != undefined) {
-			type = me.component;
-			componentFactory = me.componentFactoryResolver.resolveComponentFactory(type);
-			me.componentRef = dynamicTarget.createComponent(componentFactory);
-			//me.componentRef.instance['buttontext'] = 'testing';
-			var node = me.extjsObject.innerElement.dom;
-			node.appendChild(me.componentRef['_hostElement'].nativeElement);
-		}
+//		if (me.component != undefined) {
+//			type = me.component;
+//			componentFactory = me.componentFactoryResolver.resolveComponentFactory(type);
+//			me.componentRef = dynamicTarget.createComponent(componentFactory);
+//			//me.componentRef.instance['buttontext'] = 'testing';
+//			var node = me.extjsObject.innerElement.dom;
+//			node.appendChild(me.componentRef['_hostElement'].nativeElement);
+//		}
 		if (me.parent != undefined) {
 			me.parent.insert(0, me.extjsObject);
 		}

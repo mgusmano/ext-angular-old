@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.form.FieldSet
-class fieldsetMetaData {
+export class fieldsetMetaData {
 	public static XTYPE: string = 'fieldset';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

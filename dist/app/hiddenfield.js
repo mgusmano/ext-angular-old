@@ -24,6 +24,7 @@ var hiddenfieldMetaData = (function () {
     }
     return hiddenfieldMetaData;
 }());
+export { hiddenfieldMetaData };
 hiddenfieldMetaData.XTYPE = 'hiddenfield';
 hiddenfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

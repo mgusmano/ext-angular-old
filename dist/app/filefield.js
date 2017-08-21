@@ -24,6 +24,7 @@ var filefieldMetaData = (function () {
     }
     return filefieldMetaData;
 }());
+export { filefieldMetaData };
 filefieldMetaData.XTYPE = 'filefield';
 filefieldMetaData.INPUTNAMES = [
     'accept',

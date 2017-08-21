@@ -24,6 +24,7 @@ var titlebarMetaData = (function () {
     }
     return titlebarMetaData;
 }());
+export { titlebarMetaData };
 titlebarMetaData.XTYPE = 'titlebar';
 titlebarMetaData.INPUTNAMES = [
     'activeItem',

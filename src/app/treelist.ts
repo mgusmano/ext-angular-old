@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.list.Tree
-class treelistMetaData {
+export class treelistMetaData {
 	public static XTYPE: string = 'treelist';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

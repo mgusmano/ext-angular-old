@@ -24,6 +24,7 @@ var thumbMetaData = (function () {
     }
     return thumbMetaData;
 }());
+export { thumbMetaData };
 thumbMetaData.XTYPE = 'thumb';
 thumbMetaData.INPUTNAMES = [
     'alwaysOnTop',

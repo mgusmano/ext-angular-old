@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Toggle
-class togglefieldMetaData {
+export class togglefieldMetaData {
 	public static XTYPE: string = 'togglefield';
 	public static INPUTNAMES: string[] = [
 		'activeLabel',

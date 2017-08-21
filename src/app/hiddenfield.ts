@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Hidden
-class hiddenfieldMetaData {
+export class hiddenfieldMetaData {
 	public static XTYPE: string = 'hiddenfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

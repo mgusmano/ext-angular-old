@@ -24,6 +24,7 @@ var pivotrangeeditorMetaData = (function () {
     }
     return pivotrangeeditorMetaData;
 }());
+export { pivotrangeeditorMetaData };
 pivotrangeeditorMetaData.XTYPE = 'pivotrangeeditor';
 pivotrangeeditorMetaData.INPUTNAMES = [
     'activeItem',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Container
-class containerMetaData {
+export class containerMetaData {
 	public static XTYPE: string = 'container';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

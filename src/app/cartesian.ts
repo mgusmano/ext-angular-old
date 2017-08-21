@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.chart.CartesianChart
-class cartesianMetaData {
+export class cartesianMetaData {
 	public static XTYPE: string = 'cartesian';
 	public static INPUTNAMES: string[] = [
 		'animation',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Spinner
-class spinnerfieldMetaData {
+export class spinnerfieldMetaData {
 	public static XTYPE: string = 'spinnerfield';
 	public static INPUTNAMES: string[] = [
 		'accelerateOnTapHold',

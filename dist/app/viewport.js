@@ -24,6 +24,7 @@ var viewportMetaData = (function () {
     }
     return viewportMetaData;
 }());
+export { viewportMetaData };
 viewportMetaData.XTYPE = 'viewport';
 viewportMetaData.INPUTNAMES = [
     'activeItem',

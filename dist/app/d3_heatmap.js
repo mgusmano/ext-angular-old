@@ -24,6 +24,7 @@ var d3_heatmapMetaData = (function () {
     }
     return d3_heatmapMetaData;
 }());
+export { d3_heatmapMetaData };
 d3_heatmapMetaData.XTYPE = 'd3-heatmap';
 d3_heatmapMetaData.INPUTNAMES = [
     'alwaysOnTop',

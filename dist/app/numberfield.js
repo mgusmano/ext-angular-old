@@ -24,6 +24,7 @@ var numberfieldMetaData = (function () {
     }
     return numberfieldMetaData;
 }());
+export { numberfieldMetaData };
 numberfieldMetaData.XTYPE = 'numberfield';
 numberfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

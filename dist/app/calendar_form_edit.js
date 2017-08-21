@@ -24,6 +24,7 @@ var calendar_form_editMetaData = (function () {
     }
     return calendar_form_editMetaData;
 }());
+export { calendar_form_editMetaData };
 calendar_form_editMetaData.XTYPE = 'calendar-form-edit';
 calendar_form_editMetaData.INPUTNAMES = [
     'defaultEndTime',

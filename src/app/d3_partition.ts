@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.d3.hierarchy.partition.Partition
-class d3_partitionMetaData {
+export class d3_partitionMetaData {
 	public static XTYPE: string = 'd3-partition';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

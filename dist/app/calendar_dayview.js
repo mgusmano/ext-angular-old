@@ -24,6 +24,7 @@ var calendar_dayviewMetaData = (function () {
     }
     return calendar_dayviewMetaData;
 }());
+export { calendar_dayviewMetaData };
 calendar_dayviewMetaData.XTYPE = 'calendar-dayview';
 calendar_dayviewMetaData.INPUTNAMES = [
     'addForm',

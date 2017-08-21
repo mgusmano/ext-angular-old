@@ -24,6 +24,7 @@ var calendar_daysMetaData = (function () {
     }
     return calendar_daysMetaData;
 }());
+export { calendar_daysMetaData };
 calendar_daysMetaData.XTYPE = 'calendar-days';
 calendar_daysMetaData.INPUTNAMES = [
     'configExtractor',

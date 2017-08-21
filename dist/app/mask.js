@@ -24,6 +24,7 @@ var maskMetaData = (function () {
     }
     return maskMetaData;
 }());
+export { maskMetaData };
 maskMetaData.XTYPE = 'mask';
 maskMetaData.INPUTNAMES = [
     'alwaysOnTop',

@@ -24,6 +24,7 @@ var mediaMetaData = (function () {
     }
     return mediaMetaData;
 }());
+export { mediaMetaData };
 mediaMetaData.XTYPE = 'media';
 mediaMetaData.INPUTNAMES = [
     'alwaysOnTop',

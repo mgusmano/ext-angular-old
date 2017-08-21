@@ -24,6 +24,7 @@ var checkboxfieldMetaData = (function () {
     }
     return checkboxfieldMetaData;
 }());
+export { checkboxfieldMetaData };
 checkboxfieldMetaData.XTYPE = 'checkboxfield';
 checkboxfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.slider.Toggle
-class togglesliderMetaData {
+export class togglesliderMetaData {
 	public static XTYPE: string = 'toggleslider';
 	public static INPUTNAMES: string[] = [
 		'allowThumbsOverlapping',

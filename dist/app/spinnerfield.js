@@ -24,6 +24,7 @@ var spinnerfieldMetaData = (function () {
     }
     return spinnerfieldMetaData;
 }());
+export { spinnerfieldMetaData };
 spinnerfieldMetaData.XTYPE = 'spinnerfield';
 spinnerfieldMetaData.INPUTNAMES = [
     'accelerateOnTapHold',

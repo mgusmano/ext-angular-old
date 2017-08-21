@@ -24,6 +24,7 @@ var urlfieldMetaData = (function () {
     }
     return urlfieldMetaData;
 }());
+export { urlfieldMetaData };
 urlfieldMetaData.XTYPE = 'urlfield';
 urlfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

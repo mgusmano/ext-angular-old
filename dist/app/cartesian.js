@@ -24,6 +24,7 @@ var cartesianMetaData = (function () {
     }
     return cartesianMetaData;
 }());
+export { cartesianMetaData };
 cartesianMetaData.XTYPE = 'cartesian';
 cartesianMetaData.INPUTNAMES = [
     'animation',

@@ -24,6 +24,7 @@ var tooltipMetaData = (function () {
     }
     return tooltipMetaData;
 }());
+export { tooltipMetaData };
 tooltipMetaData.XTYPE = 'tooltip';
 tooltipMetaData.INPUTNAMES = [
     'activeItem',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.MessageBox
-class messageboxMetaData {
+export class messageboxMetaData {
 	public static XTYPE: string = 'messagebox';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

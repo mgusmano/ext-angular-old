@@ -24,6 +24,7 @@ var buttonMetaData = (function () {
     }
     return buttonMetaData;
 }());
+export { buttonMetaData };
 buttonMetaData.XTYPE = 'button';
 buttonMetaData.INPUTNAMES = [
     'allowDepress',

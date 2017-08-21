@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.view.Days
-class calendar_daysviewMetaData {
+export class calendar_daysviewMetaData {
 	public static XTYPE: string = 'calendar-daysview';
 	public static INPUTNAMES: string[] = [
 		'addForm',

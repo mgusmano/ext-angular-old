@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.grid.PagingToolbar
-class pagingtoolbarMetaData {
+export class pagingtoolbarMetaData {
 	public static XTYPE: string = 'pagingtoolbar';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

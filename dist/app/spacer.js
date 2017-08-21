@@ -24,6 +24,7 @@ var spacerMetaData = (function () {
     }
     return spacerMetaData;
 }());
+export { spacerMetaData };
 spacerMetaData.XTYPE = 'spacer';
 spacerMetaData.INPUTNAMES = [
     'alwaysOnTop',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Select
-class selectfieldMetaData {
+export class selectfieldMetaData {
 	public static XTYPE: string = 'selectfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

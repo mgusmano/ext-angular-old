@@ -24,6 +24,7 @@ var headercontainerMetaData = (function () {
     }
     return headercontainerMetaData;
 }());
+export { headercontainerMetaData };
 headercontainerMetaData.XTYPE = 'headercontainer';
 headercontainerMetaData.INPUTNAMES = [
     'activeItem',

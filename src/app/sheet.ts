@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Sheet
-class sheetMetaData {
+export class sheetMetaData {
 	public static XTYPE: string = 'sheet';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

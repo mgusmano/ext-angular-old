@@ -1,5 +1,11 @@
 import { ElementRef, ComponentFactoryResolver, ViewContainerRef, QueryList } from '@angular/core';
 import { base } from './base';
+export declare class singlesliderfieldMetaData {
+    static XTYPE: string;
+    static INPUTNAMES: string[];
+    static OUTPUTS: any[];
+    static OUTPUTNAMES: string[];
+}
 export declare class singlesliderfield extends base {
     constructor(eRef: ElementRef, resolver: ComponentFactoryResolver, vcRef: ViewContainerRef);
     extbaseRef: QueryList<base>;

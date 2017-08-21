@@ -24,6 +24,7 @@ var d3_partitionMetaData = (function () {
     }
     return d3_partitionMetaData;
 }());
+export { d3_partitionMetaData };
 d3_partitionMetaData.XTYPE = 'd3-partition';
 d3_partitionMetaData.INPUTNAMES = [
     'alwaysOnTop',

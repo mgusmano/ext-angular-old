@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Number
-class numberfieldMetaData {
+export class numberfieldMetaData {
 	public static XTYPE: string = 'numberfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Email
-class emailfieldMetaData {
+export class emailfieldMetaData {
 	public static XTYPE: string = 'emailfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

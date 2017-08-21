@@ -1,5 +1,11 @@
 import { ElementRef, ComponentFactoryResolver, ViewContainerRef, QueryList } from '@angular/core';
 import { base } from './base';
+export declare class cartesianMetaData {
+    static XTYPE: string;
+    static INPUTNAMES: string[];
+    static OUTPUTS: any[];
+    static OUTPUTNAMES: string[];
+}
 export declare class cartesian extends base {
     constructor(eRef: ElementRef, resolver: ComponentFactoryResolver, vcRef: ViewContainerRef);
     extbaseRef: QueryList<base>;

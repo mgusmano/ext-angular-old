@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.TextInput
-class textinputMetaData {
+export class textinputMetaData {
 	public static XTYPE: string = 'textinput';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

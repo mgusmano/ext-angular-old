@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.File
-class filefieldMetaData {
+export class filefieldMetaData {
 	public static XTYPE: string = 'filefield';
 	public static INPUTNAMES: string[] = [
 		'accept',

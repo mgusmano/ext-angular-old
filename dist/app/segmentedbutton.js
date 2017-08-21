@@ -24,6 +24,7 @@ var segmentedbuttonMetaData = (function () {
     }
     return segmentedbuttonMetaData;
 }());
+export { segmentedbuttonMetaData };
 segmentedbuttonMetaData.XTYPE = 'segmentedbutton';
 segmentedbuttonMetaData.INPUTNAMES = [
     'activeItem',

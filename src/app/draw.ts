@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.draw.Container
-class drawMetaData {
+export class drawMetaData {
 	public static XTYPE: string = 'draw';
 	public static INPUTNAMES: string[] = [
 		'engine',

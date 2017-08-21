@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.chart.SpaceFillingChart
-class spacefillingMetaData {
+export class spacefillingMetaData {
 	public static XTYPE: string = 'spacefilling';
 	public static INPUTNAMES: string[] = [
 		'animation',

@@ -24,6 +24,7 @@ var sheetMetaData = (function () {
     }
     return sheetMetaData;
 }());
+export { sheetMetaData };
 sheetMetaData.XTYPE = 'sheet';
 sheetMetaData.INPUTNAMES = [
     'activeItem',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.dataview.List
-class listMetaData {
+export class listMetaData {
 	public static XTYPE: string = 'list';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

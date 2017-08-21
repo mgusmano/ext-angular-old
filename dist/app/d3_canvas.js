@@ -24,6 +24,7 @@ var d3_canvasMetaData = (function () {
     }
     return d3_canvasMetaData;
 }());
+export { d3_canvasMetaData };
 d3_canvasMetaData.XTYPE = 'd3-canvas';
 d3_canvasMetaData.INPUTNAMES = [
     'alwaysOnTop',

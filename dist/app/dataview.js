@@ -24,6 +24,7 @@ var dataviewMetaData = (function () {
     }
     return dataviewMetaData;
 }());
+export { dataviewMetaData };
 dataviewMetaData.XTYPE = 'dataview';
 dataviewMetaData.INPUTNAMES = [
     'activeItem',

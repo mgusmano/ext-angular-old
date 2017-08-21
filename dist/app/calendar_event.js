@@ -24,6 +24,7 @@ var calendar_eventMetaData = (function () {
     }
     return calendar_eventMetaData;
 }());
+export { calendar_eventMetaData };
 calendar_eventMetaData.XTYPE = 'calendar-event';
 calendar_eventMetaData.INPUTNAMES = [
     'defaultTitle',

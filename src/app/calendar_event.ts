@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.Event
-class calendar_eventMetaData {
+export class calendar_eventMetaData {
 	public static XTYPE: string = 'calendar-event';
 	public static INPUTNAMES: string[] = [
 		'defaultTitle',

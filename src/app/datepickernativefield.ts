@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.DatePickerNative
-class datepickernativefieldMetaData {
+export class datepickernativefieldMetaData {
 	public static XTYPE: string = 'datepickernativefield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

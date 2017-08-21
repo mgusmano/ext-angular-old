@@ -24,6 +24,7 @@ var sliderMetaData = (function () {
     }
     return sliderMetaData;
 }());
+export { sliderMetaData };
 sliderMetaData.XTYPE = 'slider';
 sliderMetaData.INPUTNAMES = [
     'allowThumbsOverlapping',

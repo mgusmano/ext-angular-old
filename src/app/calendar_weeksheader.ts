@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.header.Weeks
-class calendar_weeksheaderMetaData {
+export class calendar_weeksheaderMetaData {
 	public static XTYPE: string = 'calendar-weeksheader';
 	public static INPUTNAMES: string[] = [
 		'cellCls',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.dataview.IndexBar
-class indexbarMetaData {
+export class indexbarMetaData {
 	public static XTYPE: string = 'indexbar';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

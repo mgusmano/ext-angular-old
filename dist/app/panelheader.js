@@ -24,6 +24,7 @@ var panelheaderMetaData = (function () {
     }
     return panelheaderMetaData;
 }());
+export { panelheaderMetaData };
 panelheaderMetaData.XTYPE = 'panelheader';
 panelheaderMetaData.INPUTNAMES = [
     'activeItem',

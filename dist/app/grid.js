@@ -24,6 +24,7 @@ var gridMetaData = (function () {
     }
     return gridMetaData;
 }());
+export { gridMetaData };
 gridMetaData.XTYPE = 'grid';
 gridMetaData.INPUTNAMES = [
     'activeItem',

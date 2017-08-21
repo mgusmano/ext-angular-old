@@ -24,6 +24,7 @@ var polarMetaData = (function () {
     }
     return polarMetaData;
 }());
+export { polarMetaData };
 polarMetaData.XTYPE = 'polar';
 polarMetaData.INPUTNAMES = [
     'animation',

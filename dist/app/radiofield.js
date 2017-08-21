@@ -24,6 +24,7 @@ var radiofieldMetaData = (function () {
     }
     return radiofieldMetaData;
 }());
+export { radiofieldMetaData };
 radiofieldMetaData.XTYPE = 'radiofield';
 radiofieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

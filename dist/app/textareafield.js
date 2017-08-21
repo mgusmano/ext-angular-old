@@ -24,6 +24,7 @@ var textareafieldMetaData = (function () {
     }
     return textareafieldMetaData;
 }());
+export { textareafieldMetaData };
 textareafieldMetaData.XTYPE = 'textareafield';
 textareafieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

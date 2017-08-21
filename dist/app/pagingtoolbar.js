@@ -24,6 +24,7 @@ var pagingtoolbarMetaData = (function () {
     }
     return pagingtoolbarMetaData;
 }());
+export { pagingtoolbarMetaData };
 pagingtoolbarMetaData.XTYPE = 'pagingtoolbar';
 pagingtoolbarMetaData.INPUTNAMES = [
     'activeItem',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.d3.hierarchy.partition.Sunburst
-class d3_sunburstMetaData {
+export class d3_sunburstMetaData {
 	public static XTYPE: string = 'd3-sunburst';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.panel.Day
-class calendar_dayMetaData {
+export class calendar_dayMetaData {
 	public static XTYPE: string = 'calendar-day';
 	public static INPUTNAMES: string[] = [
 		'configExtractor',

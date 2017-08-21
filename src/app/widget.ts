@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Widget
-class widgetMetaData {
+export class widgetMetaData {
 	public static XTYPE: string = 'widget';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

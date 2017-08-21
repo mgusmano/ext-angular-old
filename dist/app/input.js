@@ -24,6 +24,7 @@ var inputMetaData = (function () {
     }
     return inputMetaData;
 }());
+export { inputMetaData };
 inputMetaData.XTYPE = 'input';
 inputMetaData.INPUTNAMES = [
     'alwaysOnTop',

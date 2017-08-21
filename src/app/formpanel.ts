@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.form.Panel
-class formpanelMetaData {
+export class formpanelMetaData {
 	public static XTYPE: string = 'formpanel';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

@@ -24,6 +24,7 @@ var loadmaskMetaData = (function () {
     }
     return loadmaskMetaData;
 }());
+export { loadmaskMetaData };
 loadmaskMetaData.XTYPE = 'loadmask';
 loadmaskMetaData.INPUTNAMES = [
     'alwaysOnTop',

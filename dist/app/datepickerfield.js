@@ -24,6 +24,7 @@ var datepickerfieldMetaData = (function () {
     }
     return datepickerfieldMetaData;
 }());
+export { datepickerfieldMetaData };
 datepickerfieldMetaData.XTYPE = 'datepickerfield';
 datepickerfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

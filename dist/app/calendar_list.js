@@ -24,6 +24,7 @@ var calendar_listMetaData = (function () {
     }
     return calendar_listMetaData;
 }());
+export { calendar_listMetaData };
 calendar_listMetaData.XTYPE = 'calendar-list';
 calendar_listMetaData.INPUTNAMES = [
     'enableToggle',

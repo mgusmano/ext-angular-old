@@ -24,6 +24,7 @@ var emailfieldMetaData = (function () {
     }
     return emailfieldMetaData;
 }());
+export { emailfieldMetaData };
 emailfieldMetaData.XTYPE = 'emailfield';
 emailfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

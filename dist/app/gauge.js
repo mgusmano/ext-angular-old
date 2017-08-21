@@ -24,6 +24,7 @@ var gaugeMetaData = (function () {
     }
     return gaugeMetaData;
 }());
+export { gaugeMetaData };
 gaugeMetaData.XTYPE = 'gauge';
 gaugeMetaData.INPUTNAMES = [
     'angleOffset',

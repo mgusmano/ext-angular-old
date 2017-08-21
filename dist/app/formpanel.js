@@ -24,6 +24,7 @@ var formpanelMetaData = (function () {
     }
     return formpanelMetaData;
 }());
+export { formpanelMetaData };
 formpanelMetaData.XTYPE = 'formpanel';
 formpanelMetaData.INPUTNAMES = [
     'activeItem',

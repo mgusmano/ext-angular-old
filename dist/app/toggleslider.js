@@ -24,6 +24,7 @@ var togglesliderMetaData = (function () {
     }
     return togglesliderMetaData;
 }());
+export { togglesliderMetaData };
 togglesliderMetaData.XTYPE = 'toggleslider';
 togglesliderMetaData.INPUTNAMES = [
     'allowThumbsOverlapping',

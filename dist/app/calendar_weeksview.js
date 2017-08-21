@@ -24,6 +24,7 @@ var calendar_weeksviewMetaData = (function () {
     }
     return calendar_weeksviewMetaData;
 }());
+export { calendar_weeksviewMetaData };
 calendar_weeksviewMetaData.XTYPE = 'calendar-weeksview';
 calendar_weeksviewMetaData.INPUTNAMES = [
     'addForm',

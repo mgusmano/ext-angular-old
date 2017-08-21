@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.chart.interactions.Abstract
-class interactionMetaData {
+export class interactionMetaData {
 	public static XTYPE: string = 'interaction';
 	public static INPUTNAMES: string[] = [
 		'chart',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.viewport.Default
-class viewportMetaData {
+export class viewportMetaData {
 	public static XTYPE: string = 'viewport';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

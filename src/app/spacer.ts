@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Spacer
-class spacerMetaData {
+export class spacerMetaData {
 	public static XTYPE: string = 'spacer';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Checkbox
-class checkboxfieldMetaData {
+export class checkboxfieldMetaData {
 	public static XTYPE: string = 'checkboxfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

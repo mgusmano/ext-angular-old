@@ -24,6 +24,7 @@ var toolbarMetaData = (function () {
     }
     return toolbarMetaData;
 }());
+export { toolbarMetaData };
 toolbarMetaData.XTYPE = 'toolbar';
 toolbarMetaData.INPUTNAMES = [
     'activeItem',

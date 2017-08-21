@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.carousel.Carousel
-class carouselMetaData {
+export class carouselMetaData {
 	public static XTYPE: string = 'carousel';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

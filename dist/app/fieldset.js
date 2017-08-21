@@ -24,6 +24,7 @@ var fieldsetMetaData = (function () {
     }
     return fieldsetMetaData;
 }());
+export { fieldsetMetaData };
 fieldsetMetaData.XTYPE = 'fieldset';
 fieldsetMetaData.INPUTNAMES = [
     'activeItem',

@@ -24,6 +24,7 @@ var carouselMetaData = (function () {
     }
     return carouselMetaData;
 }());
+export { carouselMetaData };
 carouselMetaData.XTYPE = 'carousel';
 carouselMetaData.INPUTNAMES = [
     'activeItem',

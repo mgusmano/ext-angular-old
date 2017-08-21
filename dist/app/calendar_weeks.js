@@ -24,6 +24,7 @@ var calendar_weeksMetaData = (function () {
     }
     return calendar_weeksMetaData;
 }());
+export { calendar_weeksMetaData };
 calendar_weeksMetaData.XTYPE = 'calendar-weeks';
 calendar_weeksMetaData.INPUTNAMES = [
     'configExtractor',

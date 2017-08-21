@@ -24,6 +24,7 @@ var d3_sunburstMetaData = (function () {
     }
     return d3_sunburstMetaData;
 }());
+export { d3_sunburstMetaData };
 d3_sunburstMetaData.XTYPE = 'd3-sunburst';
 d3_sunburstMetaData.INPUTNAMES = [
     'alwaysOnTop',

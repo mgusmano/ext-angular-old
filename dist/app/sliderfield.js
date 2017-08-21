@@ -24,6 +24,7 @@ var sliderfieldMetaData = (function () {
     }
     return sliderfieldMetaData;
 }());
+export { sliderfieldMetaData };
 sliderfieldMetaData.XTYPE = 'sliderfield';
 sliderfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

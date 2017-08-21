@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.grid.HeaderContainer
-class headercontainerMetaData {
+export class headercontainerMetaData {
 	public static XTYPE: string = 'headercontainer';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

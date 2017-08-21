@@ -24,6 +24,7 @@ var paneltitleMetaData = (function () {
     }
     return paneltitleMetaData;
 }());
+export { paneltitleMetaData };
 paneltitleMetaData.XTYPE = 'paneltitle';
 paneltitleMetaData.INPUTNAMES = [
     'alwaysOnTop',

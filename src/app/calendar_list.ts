@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.List
-class calendar_listMetaData {
+export class calendar_listMetaData {
 	public static XTYPE: string = 'calendar-list';
 	public static INPUTNAMES: string[] = [
 		'enableToggle',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.DatePicker
-class datepickerfieldMetaData {
+export class datepickerfieldMetaData {
 	public static XTYPE: string = 'datepickerfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

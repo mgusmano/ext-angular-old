@@ -24,6 +24,7 @@ var calendarMetaData = (function () {
     }
     return calendarMetaData;
 }());
+export { calendarMetaData };
 calendarMetaData.XTYPE = 'calendar';
 calendarMetaData.INPUTNAMES = [
     'calendarList',

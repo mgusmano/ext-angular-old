@@ -24,6 +24,7 @@ var pickerslotMetaData = (function () {
     }
     return pickerslotMetaData;
 }());
+export { pickerslotMetaData };
 pickerslotMetaData.XTYPE = 'pickerslot';
 pickerslotMetaData.INPUTNAMES = [
     'activeItem',

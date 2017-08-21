@@ -24,6 +24,7 @@ var labelMetaData = (function () {
     }
     return labelMetaData;
 }());
+export { labelMetaData };
 labelMetaData.XTYPE = 'label';
 labelMetaData.INPUTNAMES = [
     'alwaysOnTop',

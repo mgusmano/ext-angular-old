@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Menu
-class menuMetaData {
+export class menuMetaData {
 	public static XTYPE: string = 'menu';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

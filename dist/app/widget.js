@@ -24,6 +24,7 @@ var widgetMetaData = (function () {
     }
     return widgetMetaData;
 }());
+export { widgetMetaData };
 widgetMetaData.XTYPE = 'widget';
 widgetMetaData.INPUTNAMES = [
     'alwaysOnTop',

@@ -24,6 +24,7 @@ var menuMetaData = (function () {
     }
     return menuMetaData;
 }());
+export { menuMetaData };
 menuMetaData.XTYPE = 'menu';
 menuMetaData.INPUTNAMES = [
     'activeItem',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.d3.canvas.Canvas
-class d3_canvasMetaData {
+export class d3_canvasMetaData {
 	public static XTYPE: string = 'd3-canvas';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

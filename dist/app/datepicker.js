@@ -24,6 +24,7 @@ var datepickerMetaData = (function () {
     }
     return datepickerMetaData;
 }());
+export { datepickerMetaData };
 datepickerMetaData.XTYPE = 'datepicker';
 datepickerMetaData.INPUTNAMES = [
     'activeItem',

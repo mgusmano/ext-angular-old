@@ -24,6 +24,7 @@ var searchfieldMetaData = (function () {
     }
     return searchfieldMetaData;
 }());
+export { searchfieldMetaData };
 searchfieldMetaData.XTYPE = 'searchfield';
 searchfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

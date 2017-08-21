@@ -24,6 +24,7 @@ var treeMetaData = (function () {
     }
     return treeMetaData;
 }());
+export { treeMetaData };
 treeMetaData.XTYPE = 'tree';
 treeMetaData.INPUTNAMES = [
     'activeItem',

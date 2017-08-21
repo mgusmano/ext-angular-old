@@ -24,6 +24,7 @@ var componentMetaData = (function () {
     }
     return componentMetaData;
 }());
+export { componentMetaData };
 componentMetaData.XTYPE = 'component';
 componentMetaData.INPUTNAMES = [
     'alwaysOnTop',

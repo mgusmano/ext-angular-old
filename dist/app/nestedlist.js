@@ -24,6 +24,7 @@ var nestedlistMetaData = (function () {
     }
     return nestedlistMetaData;
 }());
+export { nestedlistMetaData };
 nestedlistMetaData.XTYPE = 'nestedlist';
 nestedlistMetaData.INPUTNAMES = [
     'activeItem',

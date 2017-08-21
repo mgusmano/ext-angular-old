@@ -24,6 +24,7 @@ var pickerMetaData = (function () {
     }
     return pickerMetaData;
 }());
+export { pickerMetaData };
 pickerMetaData.XTYPE = 'picker';
 pickerMetaData.INPUTNAMES = [
     'activeItem',

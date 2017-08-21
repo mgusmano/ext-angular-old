@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.d3.HeatMap
-class d3_heatmapMetaData {
+export class d3_heatmapMetaData {
 	public static XTYPE: string = 'd3-heatmap';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

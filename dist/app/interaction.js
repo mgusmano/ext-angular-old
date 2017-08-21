@@ -24,6 +24,7 @@ var interactionMetaData = (function () {
     }
     return interactionMetaData;
 }());
+export { interactionMetaData };
 interactionMetaData.XTYPE = 'interaction';
 interactionMetaData.INPUTNAMES = [
     'chart',

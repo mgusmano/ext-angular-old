@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Search
-class searchfieldMetaData {
+export class searchfieldMetaData {
 	public static XTYPE: string = 'searchfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

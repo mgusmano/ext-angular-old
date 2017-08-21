@@ -24,6 +24,7 @@ var listMetaData = (function () {
     }
     return listMetaData;
 }());
+export { listMetaData };
 listMetaData.XTYPE = 'list';
 listMetaData.INPUTNAMES = [
     'activeItem',

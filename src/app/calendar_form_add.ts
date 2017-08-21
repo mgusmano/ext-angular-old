@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.form.Add
-class calendar_form_addMetaData {
+export class calendar_form_addMetaData {
 	public static XTYPE: string = 'calendar-form-add';
 	public static INPUTNAMES: string[] = [
 		'defaultEndTime',

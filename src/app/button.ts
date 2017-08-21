@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Button
-class buttonMetaData {
+export class buttonMetaData {
 	public static XTYPE: string = 'button';
 	public static INPUTNAMES: string[] = [
 		'allowDepress',

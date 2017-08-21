@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.ux.Gauge
-class gaugeMetaData {
+export class gaugeMetaData {
 	public static XTYPE: string = 'gauge';
 	public static INPUTNAMES: string[] = [
 		'angleOffset',

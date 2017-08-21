@@ -24,6 +24,7 @@ var pickerfieldMetaData = (function () {
     }
     return pickerfieldMetaData;
 }());
+export { pickerfieldMetaData };
 pickerfieldMetaData.XTYPE = 'pickerfield';
 pickerfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

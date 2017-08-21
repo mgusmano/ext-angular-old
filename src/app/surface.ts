@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.draw.Surface
-class surfaceMetaData {
+export class surfaceMetaData {
 	public static XTYPE: string = 'surface';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

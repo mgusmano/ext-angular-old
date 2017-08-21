@@ -24,6 +24,7 @@ var tabbarMetaData = (function () {
     }
     return tabbarMetaData;
 }());
+export { tabbarMetaData };
 tabbarMetaData.XTYPE = 'tabbar';
 tabbarMetaData.INPUTNAMES = [
     'activeItem',

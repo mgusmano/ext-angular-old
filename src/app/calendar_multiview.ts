@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.view.Multi
-class calendar_multiviewMetaData {
+export class calendar_multiviewMetaData {
 	public static XTYPE: string = 'calendar-multiview';
 	public static INPUTNAMES: string[] = [
 		'compact',

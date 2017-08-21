@@ -24,6 +24,7 @@ var calendar_weeksheaderMetaData = (function () {
     }
     return calendar_weeksheaderMetaData;
 }());
+export { calendar_weeksheaderMetaData };
 calendar_weeksheaderMetaData.XTYPE = 'calendar-weeksheader';
 calendar_weeksheaderMetaData.INPUTNAMES = [
     'cellCls',

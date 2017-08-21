@@ -24,6 +24,7 @@ var treelistMetaData = (function () {
     }
     return treelistMetaData;
 }());
+export { treelistMetaData };
 treelistMetaData.XTYPE = 'treelist';
 treelistMetaData.INPUTNAMES = [
     'alwaysOnTop',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.panel.Header
-class panelheaderMetaData {
+export class panelheaderMetaData {
 	public static XTYPE: string = 'panelheader';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.SingleSlider
-class singlesliderfieldMetaData {
+export class singlesliderfieldMetaData {
 	public static XTYPE: string = 'singlesliderfield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

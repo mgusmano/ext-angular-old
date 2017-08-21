@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.TitleBar
-class titlebarMetaData {
+export class titlebarMetaData {
 	public static XTYPE: string = 'titlebar';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

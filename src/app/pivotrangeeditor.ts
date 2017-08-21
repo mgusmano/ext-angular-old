@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.pivot.plugin.rangeeditor.Panel
-class pivotrangeeditorMetaData {
+export class pivotrangeeditorMetaData {
 	public static XTYPE: string = 'pivotrangeeditor';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

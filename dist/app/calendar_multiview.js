@@ -24,6 +24,7 @@ var calendar_multiviewMetaData = (function () {
     }
     return calendar_multiviewMetaData;
 }());
+export { calendar_multiviewMetaData };
 calendar_multiviewMetaData.XTYPE = 'calendar-multiview';
 calendar_multiviewMetaData.INPUTNAMES = [
     'compact',

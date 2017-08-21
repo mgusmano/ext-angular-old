@@ -24,6 +24,7 @@ var videoMetaData = (function () {
     }
     return videoMetaData;
 }());
+export { videoMetaData };
 videoMetaData.XTYPE = 'video';
 videoMetaData.INPUTNAMES = [
     'alwaysOnTop',

@@ -24,6 +24,7 @@ var titleMetaData = (function () {
     }
     return titleMetaData;
 }());
+export { titleMetaData };
 titleMetaData.XTYPE = 'title';
 titleMetaData.INPUTNAMES = [
     'alwaysOnTop',

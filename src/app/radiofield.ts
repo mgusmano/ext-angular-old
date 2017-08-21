@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.field.Radio
-class radiofieldMetaData {
+export class radiofieldMetaData {
 	public static XTYPE: string = 'radiofield';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

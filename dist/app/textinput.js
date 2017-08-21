@@ -24,6 +24,7 @@ var textinputMetaData = (function () {
     }
     return textinputMetaData;
 }());
+export { textinputMetaData };
 textinputMetaData.XTYPE = 'textinput';
 textinputMetaData.INPUTNAMES = [
     'alwaysOnTop',

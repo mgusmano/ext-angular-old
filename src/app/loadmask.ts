@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.LoadMask
-class loadmaskMetaData {
+export class loadmaskMetaData {
 	public static XTYPE: string = 'loadmask';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

@@ -24,6 +24,7 @@ var tabMetaData = (function () {
     }
     return tabMetaData;
 }());
+export { tabMetaData };
 tabMetaData.XTYPE = 'tab';
 tabMetaData.INPUTNAMES = [
     'active',

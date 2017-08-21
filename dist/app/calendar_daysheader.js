@@ -24,6 +24,7 @@ var calendar_daysheaderMetaData = (function () {
     }
     return calendar_daysheaderMetaData;
 }());
+export { calendar_daysheaderMetaData };
 calendar_daysheaderMetaData.XTYPE = 'calendar-daysheader';
 calendar_daysheaderMetaData.INPUTNAMES = [
     'cellCls',

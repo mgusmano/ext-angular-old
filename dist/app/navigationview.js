@@ -24,6 +24,7 @@ var navigationviewMetaData = (function () {
     }
     return navigationviewMetaData;
 }());
+export { navigationviewMetaData };
 navigationviewMetaData.XTYPE = 'navigationview';
 navigationviewMetaData.INPUTNAMES = [
     'activeItem',

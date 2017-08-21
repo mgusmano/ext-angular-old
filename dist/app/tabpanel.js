@@ -24,6 +24,7 @@ var tabpanelMetaData = (function () {
     }
     return tabpanelMetaData;
 }());
+export { tabpanelMetaData };
 tabpanelMetaData.XTYPE = 'tabpanel';
 tabpanelMetaData.INPUTNAMES = [
     'activeItem',

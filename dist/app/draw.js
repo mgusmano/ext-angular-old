@@ -24,6 +24,7 @@ var drawMetaData = (function () {
     }
     return drawMetaData;
 }());
+export { drawMetaData };
 drawMetaData.XTYPE = 'draw';
 drawMetaData.INPUTNAMES = [
     'engine',

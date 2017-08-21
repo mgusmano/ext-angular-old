@@ -24,6 +24,7 @@ var d3_treemapMetaData = (function () {
     }
     return d3_treemapMetaData;
 }());
+export { d3_treemapMetaData };
 d3_treemapMetaData.XTYPE = 'd3-treemap';
 d3_treemapMetaData.INPUTNAMES = [
     'alwaysOnTop',

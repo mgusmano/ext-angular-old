@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.picker.Date
-class datepickerMetaData {
+export class datepickerMetaData {
 	public static XTYPE: string = 'datepicker';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

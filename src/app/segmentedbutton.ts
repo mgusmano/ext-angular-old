@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.SegmentedButton
-class segmentedbuttonMetaData {
+export class segmentedbuttonMetaData {
 	public static XTYPE: string = 'segmentedbutton';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

@@ -24,6 +24,7 @@ var indexbarMetaData = (function () {
     }
     return indexbarMetaData;
 }());
+export { indexbarMetaData };
 indexbarMetaData.XTYPE = 'indexbar';
 indexbarMetaData.INPUTNAMES = [
     'alwaysOnTop',

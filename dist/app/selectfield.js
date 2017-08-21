@@ -24,6 +24,7 @@ var selectfieldMetaData = (function () {
     }
     return selectfieldMetaData;
 }());
+export { selectfieldMetaData };
 selectfieldMetaData.XTYPE = 'selectfield';
 selectfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

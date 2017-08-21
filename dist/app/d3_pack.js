@@ -24,6 +24,7 @@ var d3_packMetaData = (function () {
     }
     return d3_packMetaData;
 }());
+export { d3_packMetaData };
 d3_packMetaData.XTYPE = 'd3-pack';
 d3_packMetaData.INPUTNAMES = [
     'alwaysOnTop',

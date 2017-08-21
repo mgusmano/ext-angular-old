@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.chart.PolarChart
-class polarMetaData {
+export class polarMetaData {
 	public static XTYPE: string = 'polar';
 	public static INPUTNAMES: string[] = [
 		'animation',

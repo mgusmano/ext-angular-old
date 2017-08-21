@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Media
-class mediaMetaData {
+export class mediaMetaData {
 	public static XTYPE: string = 'media';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

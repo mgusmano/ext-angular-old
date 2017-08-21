@@ -24,6 +24,7 @@ var messageboxMetaData = (function () {
     }
     return messageboxMetaData;
 }());
+export { messageboxMetaData };
 messageboxMetaData.XTYPE = 'messagebox';
 messageboxMetaData.INPUTNAMES = [
     'activeItem',

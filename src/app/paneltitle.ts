@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.panel.Title
-class paneltitleMetaData {
+export class paneltitleMetaData {
 	public static XTYPE: string = 'paneltitle';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

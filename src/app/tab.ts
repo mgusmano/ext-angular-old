@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.tab.Tab
-class tabMetaData {
+export class tabMetaData {
 	public static XTYPE: string = 'tab';
 	public static INPUTNAMES: string[] = [
 		'active',

@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.picker.Picker
-class pickerMetaData {
+export class pickerMetaData {
 	public static XTYPE: string = 'picker';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

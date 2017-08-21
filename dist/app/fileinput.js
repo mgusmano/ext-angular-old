@@ -24,6 +24,7 @@ var fileinputMetaData = (function () {
     }
     return fileinputMetaData;
 }());
+export { fileinputMetaData };
 fileinputMetaData.XTYPE = 'fileinput';
 fileinputMetaData.INPUTNAMES = [
     'alwaysOnTop',

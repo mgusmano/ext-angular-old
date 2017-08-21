@@ -24,6 +24,7 @@ var spacefillingMetaData = (function () {
     }
     return spacefillingMetaData;
 }());
+export { spacefillingMetaData };
 spacefillingMetaData.XTYPE = 'spacefilling';
 spacefillingMetaData.INPUTNAMES = [
     'animation',

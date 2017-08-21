@@ -11,3 +11,6 @@ cp README.md dist/
 cp package.json dist/
 cd dist
 npm publish
+
+
+https://angular.io/guide/aot-compiler

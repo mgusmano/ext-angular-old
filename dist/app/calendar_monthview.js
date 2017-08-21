@@ -24,6 +24,7 @@ var calendar_monthviewMetaData = (function () {
     }
     return calendar_monthviewMetaData;
 }());
+export { calendar_monthviewMetaData };
 calendar_monthviewMetaData.XTYPE = 'calendar-monthview';
 calendar_monthviewMetaData.INPUTNAMES = [
     'addForm',

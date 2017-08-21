@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.d3.hierarchy.TreeMap
-class d3_treemapMetaData {
+export class d3_treemapMetaData {
 	public static XTYPE: string = 'd3-treemap';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

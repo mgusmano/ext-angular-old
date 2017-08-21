@@ -24,6 +24,7 @@ var passwordfieldMetaData = (function () {
     }
     return passwordfieldMetaData;
 }());
+export { passwordfieldMetaData };
 passwordfieldMetaData.XTYPE = 'passwordfield';
 passwordfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

@@ -24,6 +24,7 @@ var surfaceMetaData = (function () {
     }
     return surfaceMetaData;
 }());
+export { surfaceMetaData };
 surfaceMetaData.XTYPE = 'surface';
 surfaceMetaData.INPUTNAMES = [
     'alwaysOnTop',

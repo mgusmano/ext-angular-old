@@ -24,6 +24,7 @@ var pivotgridMetaData = (function () {
     }
     return pivotgridMetaData;
 }());
+export { pivotgridMetaData };
 pivotgridMetaData.XTYPE = 'pivotgrid';
 pivotgridMetaData.INPUTNAMES = [
     'activeItem',

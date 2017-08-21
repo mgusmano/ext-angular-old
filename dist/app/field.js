@@ -24,6 +24,7 @@ var fieldMetaData = (function () {
     }
     return fieldMetaData;
 }());
+export { fieldMetaData };
 fieldMetaData.XTYPE = 'field';
 fieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

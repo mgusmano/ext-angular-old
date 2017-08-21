@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.slider.Thumb
-class thumbMetaData {
+export class thumbMetaData {
 	public static XTYPE: string = 'thumb';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

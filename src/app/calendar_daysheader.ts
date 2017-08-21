@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.calendar.header.Days
-class calendar_daysheaderMetaData {
+export class calendar_daysheaderMetaData {
 	public static XTYPE: string = 'calendar-daysheader';
 	public static INPUTNAMES: string[] = [
 		'cellCls',

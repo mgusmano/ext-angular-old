@@ -24,6 +24,7 @@ var calendar_monthMetaData = (function () {
     }
     return calendar_monthMetaData;
 }());
+export { calendar_monthMetaData };
 calendar_monthMetaData.XTYPE = 'calendar-month';
 calendar_monthMetaData.INPUTNAMES = [
     'configExtractor',

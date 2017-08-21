@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Toolbar
-class toolbarMetaData {
+export class toolbarMetaData {
 	public static XTYPE: string = 'toolbar';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

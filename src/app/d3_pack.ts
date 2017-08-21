@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.d3.hierarchy.Pack
-class d3_packMetaData {
+export class d3_packMetaData {
 	public static XTYPE: string = 'd3-pack';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',

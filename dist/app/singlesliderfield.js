@@ -24,6 +24,7 @@ var singlesliderfieldMetaData = (function () {
     }
     return singlesliderfieldMetaData;
 }());
+export { singlesliderfieldMetaData };
 singlesliderfieldMetaData.XTYPE = 'singlesliderfield';
 singlesliderfieldMetaData.INPUTNAMES = [
     'alwaysOnTop',

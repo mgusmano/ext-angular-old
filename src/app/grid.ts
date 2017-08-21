@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.grid.Grid
-class gridMetaData {
+export class gridMetaData {
 	public static XTYPE: string = 'grid';
 	public static INPUTNAMES: string[] = [
 		'activeItem',

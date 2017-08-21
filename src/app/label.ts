@@ -1,7 +1,7 @@
 import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
 import { base } from './base';
 // Ext Class - Ext.Label
-class labelMetaData {
+export class labelMetaData {
 	public static XTYPE: string = 'label';
 	public static INPUTNAMES: string[] = [
 		'alwaysOnTop',
