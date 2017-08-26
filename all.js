@@ -92,6 +92,10 @@ function launch(data) {
 		}
 	}
 
+	fs.writeFile(folder + 'ExtClass' + '.ts', doExtClass(), 
+	function(err) {if(err){return console.log(err);}
+});
+
 	fs.writeFile(folder + 'base' + '.ts', doExtBase(), 
 		function(err) {if(err){return console.log(err);}
 	});
@@ -260,6 +264,7 @@ export class base{
 
 function doIndex(dist) {
 return `export * from './${dist}ExtAngularModule'
+export * from './${dist}ExtClass'
 `
 }
 
@@ -354,27 +359,29 @@ export class ExtAngularModule { }
 // `
 // }
 
-// function doExtClass() {
-// 	return `export class class {
-// 	public className: any;
-// 	public extend: any;
-// 	public defineConfig: any;
-// 	public createConfig: any;
-// 	public extjsObject;
-
-// 	constructor (className: any, extend: string, defineConfig: any, createConfig: any) {
-// 		if (!Ext.ClassManager.isCreated(className)) {
-// 			Ext.apply(defineConfig, { extend: extend });
-// 			Ext.define(className, defineConfig);
-// 		}
-// 		this.className = className;
-// 		this.extend = extend;
-// 		this.defineConfig = defineConfig;
-// 		this.createConfig = createConfig;
-// 		this.extjsObject = Ext.create(className, createConfig);
-// 		this.ext = this.extjsObject;
-// 		this.x = this.extjsObject;
-// 	}
-// }
-// `
-// }
+function doExtClass() {
+	return `export class ExtClass {
+	public className: any;
+	public extend: any;
+	public defineConfig: any;
+	public createConfig: any;
+	public extjsObject;
+	public ext;
+	public x;
+	
+	constructor (className: any, extend: string, defineConfig: any, createConfig: any) {
+		if (!Ext.ClassManager.isCreated(className)) {
+			Ext.apply(defineConfig, { extend: extend });
+			Ext.define(className, defineConfig);
+		}
+		this.className = className;
+		this.extend = extend;
+		this.defineConfig = defineConfig;
+		this.createConfig = createConfig;
+		this.extjsObject = Ext.create(className, createConfig);
+		this.ext = this.extjsObject;
+		this.x = this.extjsObject;
+	}
+}
+`
+}
