@@ -96,6 +96,10 @@ function launch(data) {
 	function(err) {if(err){return console.log(err);}
 });
 
+fs.writeFile(folder + 'ngcomponent' + '.ts', doExtNgComponent(), 
+function(err) {if(err){return console.log(err);}
+});
+
 	fs.writeFile(folder + 'base' + '.ts', doExtBase(), 
 		function(err) {if(err){return console.log(err);}
 	});
@@ -242,17 +246,23 @@ export class base{
 		me.ext = me.extjsObject;
 		me.x = me.extjsObject;
 
-//		var componentFactory: ComponentFactory<any>;
-//		var type: Type<any>;
 
-//		if (me.component != undefined) {
-//			type = me.component;
-//			componentFactory = me.componentFactoryResolver.resolveComponentFactory(type);
-//			me.componentRef = dynamicTarget.createComponent(componentFactory);
-//			//me.componentRef.instance['buttontext'] = 'testing';
-//			var node = me.extjsObject.innerElement.dom;
-//			node.appendChild(me.componentRef['_hostElement'].nativeElement);
-//		}
+
+		
+		var componentFactory: ComponentFactory<any>;
+		var type: Type<any>;
+
+		if (me.component != undefined) {
+			type = me.component;
+			componentFactory = me.componentFactoryResolver.resolveComponentFactory(type);
+			me.componentRef = dynamicTarget.createComponent(componentFactory);
+			//me.componentRef.instance['buttontext'] = 'testing';
+			var node = me.extjsObject.innerElement.dom;
+			node.appendChild(me.componentRef['_hostElement'].nativeElement);
+		}
+
+
+
 		if (me.parent != undefined) {
 			me.parent.insert(0, me.extjsObject);
 		}
@@ -265,6 +275,7 @@ export class base{
 function doIndex(dist) {
 return `export * from './${dist}ExtAngularModule'
 export * from './${dist}ExtClass'
+export * from './${dist}ngcomponent'
 `
 }
 
@@ -280,6 +291,63 @@ ${declarations} ]
 export class ExtAngularModule { }
 `
 }
+
+function doExtNgComponent() {
+	return `import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
+import { base } from './base';
+class ExtNgComponentMetaData {
+	public static XTYPE: string = 'container';
+	public static INPUTNAMES: string[] = ['selector','component','selectorParams'];
+	public static OUTPUTS: any[] = [];
+	public static OUTPUTNAMES: string[] = [];
+}
+@Component({
+  selector: 'ngcomponent',
+	inputs: ExtNgComponentMetaData.INPUTNAMES.concat('config'),
+	outputs: ExtNgComponentMetaData.OUTPUTNAMES.concat('ready'),
+	providers: [{provide: base, useExisting: forwardRef(() => ngcomponent)}],
+	template: '<ng-template #dynamic></ng-template>'
+})
+export class ngcomponent extends base {
+	//@ContentChildren(base,{read:ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;
+	@ContentChildren(base,{read: base}) extbaseRef: QueryList<base>;
+	@ViewChild('dynamic',{read:ViewContainerRef}) dynamicRef: ViewContainerRef;
+	constructor(myElement: ElementRef, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef) {
+		super(myElement, componentFactoryResolver, viewContainerRef, ExtNgComponentMetaData);
+	}
+	ngAfterContentInit() { this.AfterContentInit(this.extbaseRef); }
+	ngOnInit() { this.OnInit(this.dynamicRef); }
+}
+`
+}
+
+function doExtClass() {
+	return `export class ExtClass {
+	public className: any;
+	public extend: any;
+	public defineConfig: any;
+	public createConfig: any;
+	public extjsObject;
+	public ext;
+	public x;
+	
+	constructor (className: any, extend: string, defineConfig: any, createConfig: any) {
+		if (!Ext.ClassManager.isCreated(className)) {
+			Ext.apply(defineConfig, { extend: extend });
+			Ext.define(className, defineConfig);
+		}
+		this.className = className;
+		this.extend = extend;
+		this.defineConfig = defineConfig;
+		this.createConfig = createConfig;
+		this.extjsObject = Ext.create(className, createConfig);
+		this.ext = this.extjsObject;
+		this.x = this.extjsObject;
+	}
+}
+`
+}
+
 
 // function doAppJS(allClasses) {
 // 	return `Ext.require([
@@ -329,59 +397,3 @@ export class ExtAngularModule { }
 // }
 // `
 // }
-
-// function doExtNgComponent() {
-// 	return `import {Component,ViewChild,ElementRef,ComponentFactoryResolver,ViewContainerRef,forwardRef,ContentChildren,QueryList} from '@angular/core';
-// import { base } from './base';
-// class ExtNgComponentMetaData {
-// 	public static XTYPE: string = 'container';
-// 	public static INPUTNAMES: string[] = ['selector','component','selectorParams'];
-// 	public static OUTPUTS: any[] = [];
-// 	public static OUTPUTNAMES: string[] = [];
-// }
-// @Component({
-//   selector: 'ngcomponent',
-// 	inputs: ExtNgComponentMetaData.INPUTNAMES.concat('config'),
-// 	outputs: ExtNgComponentMetaData.OUTPUTNAMES.concat('ready'),
-// 	providers: [{provide: base, useExisting: forwardRef(() => ngcomponent)}],
-// 	template: '<ng-template #dynamic></ng-template>'
-// })
-// export class ngcomponent  extends base {
-// 	//@ContentChildren(base,{read:ViewContainerRef}) extbaseRef: QueryList<ViewContainerRef>;
-// 	@ContentChildren(base,{read: base}) extbaseRef: QueryList<base>;
-// 	@ViewChild('dynamic',{read:ViewContainerRef}) dynamicRef: ViewContainerRef;
-// 	constructor(myElement: ElementRef, componentFactoryResolver: ComponentFactoryResolver, viewContainerRef: ViewContainerRef) {
-// 		super(myElement, componentFactoryResolver, viewContainerRef, ExtNgComponentMetaData);
-// 	}
-// 	ngAfterContentInit() { this.AfterContentInit(this.extbaseRef); }
-// 	ngOnInit() { this.OnInit(this.dynamicRef); }
-// }
-// `
-// }
-
-function doExtClass() {
-	return `export class ExtClass {
-	public className: any;
-	public extend: any;
-	public defineConfig: any;
-	public createConfig: any;
-	public extjsObject;
-	public ext;
-	public x;
-	
-	constructor (className: any, extend: string, defineConfig: any, createConfig: any) {
-		if (!Ext.ClassManager.isCreated(className)) {
-			Ext.apply(defineConfig, { extend: extend });
-			Ext.define(className, defineConfig);
-		}
-		this.className = className;
-		this.extend = extend;
-		this.defineConfig = defineConfig;
-		this.createConfig = createConfig;
-		this.extjsObject = Ext.create(className, createConfig);
-		this.ext = this.extjsObject;
-		this.x = this.extjsObject;
-	}
-}
-`
-}
